@@ -4,6 +4,7 @@
   <url><loc>https://b-rancher.github.io/hikelosangeles/trails.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/peaks.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/springs.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/camps.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/adams-hill-peak.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/adobe-mountain-peak.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/alpine-butte-peak.html</loc></url>
@@ -360,4 +361,63 @@
   <url><loc>https://b-rancher.github.io/hikelosangeles/world-of-chaparral-trail.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/yerba-buena-trail.html</loc></url>
   <url><loc>https://b-rancher.github.io/hikelosangeles/zion-trail.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/allison-mine-site-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/bear-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/bear-canyon-unmaintained-approximate-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/bear-cr-unofficial-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/bear-flat-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/boy-scout-trail-camp-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/cedar-glen-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/cienaga-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/comanche-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/cooper-canyon-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/cucamonga-pk-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/dawson-ridge-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/devils-canyon-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/devore-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/fall-creek-w-possibly-a-little-sketchy-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/glenn-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/gould-mesa-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/heaton-flat-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/henninger-flats-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/hoegees-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/holcomb-can-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/horse-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/idlehour-w-poison-oak-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/iron-fork-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/islip-e-ridge-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/islip-sw-ridge-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/kelly-camp-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/lion-unmaintained-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/little-fish-fork-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/little-jimmy-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/lower-bear-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/lower-fish-fork-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/maxwell-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/messenger-flats-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/mine-gulch-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/mt-baldy-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/mt-baldy-lower-ridge-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/mt-baldy-upper-ridge-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/mt-lowe-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/narrows-camp-approx-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/newcomb-pass-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/oakwilde-heavily-damaged-overgrown-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/old-logging-turnout-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/rogers-unmaintained-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/sawmill-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/spring-mainly-ohv-riders-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/spruce-grove-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/stone-house-xing-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/strawberry-potrero-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/switzer-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/third-stream-xing-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/tom-lucas-heavily-burned-in-2009-w-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/twin-saddle-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/upper-bear-w-poison-oak-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/upper-fish-fork-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/upper-shake-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/valley-forge-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/waterman-mtn-camp.html</loc></url>
+  <url><loc>https://b-rancher.github.io/hikelosangeles/west-fork-camp.html</loc></url>
 </urlset>
