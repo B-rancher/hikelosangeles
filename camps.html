@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camps — Hike Los Angeles</title>
+<meta name="description" content="Trail camps and car campgrounds across the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+  #map { height: 460px; border: 1px solid #C9C2A8; }
+  .filter-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; background: #EFE9D3; border: 1px solid #C9C2A8; padding: 12px; margin-bottom: 16px; }
+  .filter-form .fld { display: flex; flex-direction: column; font-size: 11px; text-transform: uppercase; color: #4A4636; }
+  .filter-form input[type=text] { margin-top: 4px; padding: 6px 8px; border: 1px solid #B7B097; font-size: 13px; min-width: 220px; }
+  table.pt-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.pt-table th { text-align: left; background: #2F4B2E; color: #F1EDD9; padding: 8px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; }
+  table.pt-table td { border-bottom: 1px solid #E1DBC5; padding: 8px; vertical-align: middle; }
+  table.pt-table tr:nth-child(even) td { background: #FAF8EF; }
+  table.pt-table tr:hover td { background: #F1EAD0; cursor: pointer; }
+  table.pt-table .icon-cell { width: 26px; text-align: center; }
+  .empty-row td { text-align:center; padding: 22px; color:#7A7660; font-style: italic; }
+  .src-note { font-size:11px; color:#7A7660; margin-top:10px; }
+  .section-anchor { scroll-margin-top: 90px; }
+  .coming-soon { text-align:center; padding: 40px 20px; color:#7A7660; font-style: italic; border: 1px dashed #C9C2A8; background: #FAF8EF; }
+  .water-yes { color:#2F4B2E; font-weight:bold; }
+  .water-no { color:#8A7F5E; }
+</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="peaks.html">Peaks</a></li>
+      <li><a href="springs.html">Springs &amp; Water</a></li>
+      <li><a href="camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="#trail-camps">Trail Camps</a>
+          <a href="#car-camps">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &raquo; Camps</div>
+  <h1 class="page-title">Camps</h1>
+  <p class="page-subtitle">Trail camps for backpacking, and car-accessible campgrounds, across the Angeles National Forest.</p>
+
+  <div class="panel section-anchor" id="trail-camps">
+    <div class="panel-head">Trail Camps <span class="viewall">59 camps</span></div>
+    <div class="panel-body">
+      <p style="font-size:12.5px;color:#5C5842;margin-top:0;">Backpacking camps along the Pacific Crest Trail corridor and other backcountry routes through the Angeles National Forest, compiled from a community PCT/backpacking reference. Water availability is as last reported — always verify current conditions before relying on any water source.</p>
+
+      <form class="filter-form" onsubmit="return false;">
+        <div class="fld">Search
+          <input type="text" id="campSearchInput" placeholder="Camp name">
+        </div>
+        <div class="fld"><button type="button" class="btn-classic" onclick="applyCampFilters()">Apply</button></div>
+      </form>
+
+      <div id="campMap"></div>
+
+      <div style="overflow-x:auto;margin-top:16px;">
+        <table class="pt-table" id="campTable">
+          <thead><tr><th></th><th>Name</th><th>Water</th><th>Coordinates</th></tr></thead>
+          <tbody id="campBody"></tbody>
+        </table>
+      </div>
+      <p class="src-note">Data source: community-compiled PCT / backpacking camp reference for the Angeles National Forest.</p>
+    </div>
+  </div>
+
+  <div class="panel section-anchor" id="car-camps">
+    <div class="panel-head">Car Camps <span class="viewall">Coming Soon</span></div>
+    <div class="panel-body">
+      <div class="coming-soon">
+        We haven't catalogued car-accessible campgrounds yet — check back soon, or <a href="#">submit a report</a> if you know of one that should be listed here.
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trails.html">Hiking Trails</a></li>
+      <li><a href="peaks.html">Peaks</a></li>
+      <li><a href="springs.html">Springs</a></li>
+      <li><a href="camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+const CAMPS = [{"name": "Allison Mine (Site)", "slug": "allison-mine-site-camp.html", "lat": 34.2715, "lng": -117.72857, "water": "Reported"}, {"name": "Bear", "slug": "bear-camp.html", "lat": 34.71274, "lng": -118.63153, "water": "Not reported"}, {"name": "Bear Canyon (unmaintained, approximate)", "slug": "bear-canyon-unmaintained-approximate-camp.html", "lat": 34.244152, "lng": -118.13942, "water": "Reported"}, {"name": "Bear Cr (unofficial)", "slug": "bear-cr-unofficial-camp.html", "lat": 34.251087, "lng": -117.8838, "water": "Not reported"}, {"name": "Bear Flat", "slug": "bear-flat-camp.html", "lat": 34.2487, "lng": -117.6533, "water": "Reported"}, {"name": "Boy Scout Trail Camp", "slug": "boy-scout-trail-camp-camp.html", "lat": 34.679718, "lng": -118.49385, "water": "Not reported"}, {"name": "Cedar Glen", "slug": "cedar-glen-camp.html", "lat": 34.25564, "lng": -117.61911, "water": "Reported"}, {"name": "Cienaga", "slug": "cienaga-camp.html", "lat": 34.61942, "lng": -118.63642, "water": "Reported"}, {"name": "Comanche", "slug": "comanche-camp.html", "lat": 34.244, "lng": -117.5794, "water": "Reported"}, {"name": "Cooper Canyon", "slug": "cooper-canyon-camp.html", "lat": 34.360733, "lng": -117.92059, "water": "Reported"}, {"name": "Cucamonga Pk", "slug": "cucamonga-pk-camp.html", "lat": 34.2225, "lng": -117.5862, "water": "Not reported"}, {"name": "Dawson Ridge", "slug": "dawson-ridge-camp.html", "lat": 34.35837, "lng": -117.80584, "water": "Not reported"}, {"name": "Devils Canyon", "slug": "devils-canyon-camp.html", "lat": 34.309616, "lng": -117.98162, "water": "Not reported"}, {"name": "Devore", "slug": "devore-camp.html", "lat": 34.243187, "lng": -118.03578, "water": "Reported"}, {"name": "Fall Creek - W (possibly a little sketchy)", "slug": "fall-creek-w-possibly-a-little-sketchy-camp.html", "lat": 34.305317, "lng": -118.15938, "water": "Not reported"}, {"name": "Glenn", "slug": "glenn-camp.html", "lat": 34.240765, "lng": -117.95213, "water": "Reported"}, {"name": "Gould Mesa", "slug": "gould-mesa-camp.html", "lat": 34.22197, "lng": -118.178, "water": "Not reported"}, {"name": "Heaton Flat", "slug": "heaton-flat-camp.html", "lat": 34.24205, "lng": -117.761505, "water": "Reported"}, {"name": "Henninger Flats", "slug": "henninger-flats-camp.html", "lat": 34.19284, "lng": -118.08964, "water": "Reported"}, {"name": "Hoegees", "slug": "hoegees-camp.html", "lat": 34.20772, "lng": -118.032906, "water": "Not reported"}, {"name": "Holcomb Can.", "slug": "holcomb-can-camp.html", "lat": 34.4004, "lng": -117.8397, "water": "Reported"}, {"name": "Horse", "slug": "horse-camp.html", "lat": 34.73079, "lng": -118.66011, "water": "Not reported"}, {"name": "Idlehour - W (Poison Oak!)", "slug": "idlehour-w-poison-oak-camp.html", "lat": 34.20779, "lng": -118.0838, "water": "Not reported"}, {"name": "Iron Fork", "slug": "iron-fork-camp.html", "lat": 34.295498, "lng": -117.74134, "water": "Reported"}, {"name": "Islip E Ridge", "slug": "islip-e-ridge-camp.html", "lat": 34.344376, "lng": -117.83528, "water": "Not reported"}, {"name": "Islip SW Ridge", "slug": "islip-sw-ridge-camp.html", "lat": 34.34225, "lng": -117.84309, "water": "Not reported"}, {"name": "Kelly Camp", "slug": "kelly-camp-camp.html", "lat": 34.23366, "lng": -117.60495, "water": "Reported"}, {"name": "Lion (unmaintained)", "slug": "lion-unmaintained-camp.html", "lat": 34.650528, "lng": -118.59715, "water": "Not reported"}, {"name": "Little Fish Fork", "slug": "little-fish-fork-camp.html", "lat": 34.31231, "lng": -117.67087, "water": "Reported"}, {"name": "Little Jimmy", "slug": "little-jimmy-camp.html", "lat": 34.34689, "lng": -117.83064, "water": "Reported"}, {"name": "Lower Bear", "slug": "lower-bear-camp.html", "lat": 34.255096, "lng": -117.88283, "water": "Reported"}, {"name": "Lower Fish Fork", "slug": "lower-fish-fork-camp.html", "lat": 34.30578, "lng": -117.73224, "water": "Reported"}, {"name": "Maxwell", "slug": "maxwell-camp.html", "lat": 34.688656, "lng": -118.52785, "water": "Not reported"}, {"name": "Messenger Flats", "slug": "messenger-flats-camp.html", "lat": 34.38067, "lng": -118.19092, "water": "Not reported"}, {"name": "Mine Gulch", "slug": "mine-gulch-camp.html", "lat": 34.343967, "lng": -117.725975, "water": "Reported"}, {"name": "Mt Baldy", "slug": "mt-baldy-camp.html", "lat": 34.2888, "lng": -117.6459, "water": "Not reported"}, {"name": "Mt Baldy - Lower Ridge", "slug": "mt-baldy-lower-ridge-camp.html", "lat": 34.2775546396118, "lng": -117.64439237671063, "water": "Not reported"}, {"name": "Mt Baldy - Upper Ridge", "slug": "mt-baldy-upper-ridge-camp.html", "lat": 34.28460444919216, "lng": -117.64620249773374, "water": "Not reported"}, {"name": "Mt. Lowe", "slug": "mt-lowe-camp.html", "lat": 34.226513, "lng": -118.11037, "water": "Reported"}, {"name": "Narrows Camp (Approx.)", "slug": "narrows-camp-approx-camp.html", "lat": 34.2834, "lng": -117.7443, "water": "Reported"}, {"name": "Newcomb Pass", "slug": "newcomb-pass-camp.html", "lat": 34.232437, "lng": -118.026764, "water": "Not reported"}, {"name": "Oakwilde (heavily damaged, overgrown)", "slug": "oakwilde-heavily-damaged-overgrown-camp.html", "lat": 34.2458, "lng": -118.1839, "water": "Not reported"}, {"name": "Old Logging Turnout", "slug": "old-logging-turnout-camp.html", "lat": 34.3608, "lng": -117.905, "water": "Reported"}, {"name": "Rogers  (unmaintained)", "slug": "rogers-unmaintained-camp.html", "lat": 34.635, "lng": -118.6267, "water": "Not reported"}, {"name": "Sawmill", "slug": "sawmill-camp.html", "lat": 34.70128, "lng": -118.57265, "water": "Not reported"}, {"name": "Spring (Mainly OHV riders)", "slug": "spring-mainly-ohv-riders-camp.html", "lat": 34.214542, "lng": -117.9778, "water": "Not reported"}, {"name": "Spruce Grove", "slug": "spruce-grove-camp.html", "lat": 34.220566, "lng": -118.03059, "water": "Not reported"}, {"name": "Stone House Xing", "slug": "stone-house-xing-camp.html", "lat": 34.2521, "lng": -117.5526, "water": "Reported"}, {"name": "Strawberry Potrero", "slug": "strawberry-potrero-camp.html", "lat": 34.2889, "lng": -118.1158, "water": "Not reported"}, {"name": "Switzer", "slug": "switzer-camp.html", "lat": 34.259247, "lng": -118.154526, "water": "Reported"}, {"name": "Third Stream Xing", "slug": "third-stream-xing-camp.html", "lat": 34.2543, "lng": -117.57281, "water": "Reported"}, {"name": "Tom Lucas (heavily burned in 2009) - W?", "slug": "tom-lucas-heavily-burned-in-2009-w-camp.html", "lat": 34.33107, "lng": -118.24224, "water": "Not reported"}, {"name": "Twin Saddle", "slug": "twin-saddle-camp.html", "lat": 34.3272, "lng": -117.9293, "water": "Not reported"}, {"name": "Upper Bear - W (poison oak!!)", "slug": "upper-bear-w-poison-oak-camp.html", "lat": 34.28277, "lng": -117.88536, "water": "Not reported"}, {"name": "Upper Fish Fork", "slug": "upper-fish-fork-camp.html", "lat": 34.305565, "lng": -117.67542, "water": "Reported"}, {"name": "Upper Shake", "slug": "upper-shake-camp.html", "lat": 34.6913, "lng": -118.53, "water": "Not reported"}, {"name": "Valley Forge", "slug": "valley-forge-camp.html", "lat": 34.253128, "lng": -118.07344, "water": "Reported"}, {"name": "Waterman Mtn.", "slug": "waterman-mtn-camp.html", "lat": 34.33795, "lng": -117.9375, "water": "Not reported"}, {"name": "West Fork", "slug": "west-fork-camp.html", "lat": 34.24624, "lng": -118.04839, "water": "Reported"}];
+
+let campMap, campMarkers = [];
+function initCampMap(){
+  campMap = L.map('campMap', { scrollWheelZoom:false }).setView([34.28,-118.05],10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(campMap);
+  renderCampMap(CAMPS);
+}
+function renderCampMap(list){
+  campMarkers.forEach(m=>campMap.removeLayer(m)); campMarkers=[];
+  list.forEach(c => {
+    const marker = L.circleMarker([c.lat,c.lng], { radius:5, color:'#6E7A4E', fillColor:'#6E7A4E', fillOpacity:0.85, weight:1.5 }).addTo(campMap);
+    marker.bindPopup(`<strong><a href="${c.slug}">${c.name}</a></strong><br>Water: ${c.water}`);
+    campMarkers.push(marker);
+  });
+}
+
+function renderCampTable(list){
+  const body = document.getElementById('campBody');
+  if(list.length===0){
+    body.innerHTML = '<tr class="empty-row"><td colspan="4">No matches.</td></tr>';
+    return;
+  }
+  body.innerHTML = list.map(c => `
+    <tr onclick="window.location='${c.slug}'">
+      <td class="icon-cell">&#9968;</td>
+      <td><a href="${c.slug}">${c.name}</a></td>
+      <td class="${c.water==='Reported' ? 'water-yes' : 'water-no'}">${c.water}</td>
+      <td>${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}</td>
+    </tr>
+  `).join('');
+}
+
+function applyCampFilters(){
+  const q = document.getElementById('campSearchInput').value.toLowerCase().trim();
+  const filtered = CAMPS.filter(c => !q || c.name.toLowerCase().includes(q));
+  renderCampTable(filtered);
+  renderCampMap(filtered);
+}
+document.getElementById('campSearchInput').addEventListener('input', applyCampFilters);
+
+renderCampTable(CAMPS);
+initCampMap();
+</script>
+
+</body>
+</html>
