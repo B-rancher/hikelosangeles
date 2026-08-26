@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bee Tree Interpretive — Hike Los Angeles</title>
+<meta name="description" content="Bee Tree Interpretive is a U.S. Forest Service trail in the Angeles National Forest, 0.14 miles long (Trail Class 4).">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html?region=San+Jacinto+Mountains">San Jacinto Mountains</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="#">Camps</a></li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Bee Tree Interpretive</div>
+  <h1 class="page-title">Bee Tree Interpretive</h1>
+  <p class="page-subtitle">Bee Tree Interpretive is a U.S. Forest Service trail in the Angeles National Forest, 0.14 miles long (Trail Class 4).</p>
+
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Trail Number</th><td>1311W03</td></tr>
+            <tr><th>Length</th><td>0.14 mi (1 mapped segment)</td></tr>
+            <tr><th>USFS Trail Class</th><td>4</td></tr>
+            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr>
+            <tr><th>Typical Grade</th><td>10-12%</td></tr>
+            <tr><th>Typical Tread Width</th><td>TW03 - 18-24 INCHES</td></tr>
+            <tr><th>Hiking / Pedestrian</th><td>Yes</td></tr>
+            <tr><th>Equestrian / Pack Saddle</th><td>Not specified</td></tr>
+            <tr><th>Mountain Biking</th><td>Not specified</td></tr>
+            <tr><th>Motorized Use</th><td>No</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Bee Tree Interpretive yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">Trail geometry and attributes from the U.S. Forest Service National Trail System (INFRA/EDW), Angeles National Forest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.01198424899997, 34.33113250200006], [-118.01199971899996, 34.33124235300005], [-118.01198782199998, 34.331283993000056], [-118.01200864199996, 34.33134050600006], [-118.01202053999998, 34.33141486400007], [-118.012020539, 34.33148922200007], [-118.01201059599998, 34.33153884300003], [-118.01197193099995, 34.331592381000064], [-118.01190649499995, 34.33163402200006], [-118.01184403499997, 34.331675663000055], [-118.01179941899994, 34.33169648300003], [-118.01176670199999, 34.33169945700007], [-118.01172803499998, 34.33169350800006], [-118.01170423999997, 34.33168161100008], [-118.01166259999997, 34.331687559000045], [-118.01162197999997, 34.33172716800004], [-118.01156249399997, 34.33175988600004], [-118.011511929, 34.33180450000003], [-118.01143459699995, 34.33185208900005], [-118.01137213699997, 34.33189373000005], [-118.01132650199997, 34.331946326000036], [-118.01130568099995, 34.33200581300002], [-118.01126998999996, 34.332071248000034], [-118.01123727099997, 34.33211586300007], [-118.01119265699998, 34.33213965700003], [-118.01113418999995, 34.33219711100003], [-118.01112127299996, 34.33221401600008], [-118.01112127299996, 34.33224970800006], [-118.01114209299999, 34.33228837300004], [-118.01113019599995, 34.332312168000044], [-118.01108855499996, 34.33232406500008], [-118.01105388399998, 34.33231905900004], [-118.011012242, 34.332292290000055], [-118.01097357599997, 34.33227444400006], [-118.01093193499997, 34.33227444400006], [-118.01088434699994, 34.33228634100004], [-118.01084568099998, 34.33231311000003], [-118.01080403999998, 34.33234582800003], [-118.01075644999997, 34.33237854600003], [-118.010720758, 34.332420186000036], [-118.01069101499996, 34.332455878000076], [-118.01064403999999, 34.33248095600004]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#A8503B', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

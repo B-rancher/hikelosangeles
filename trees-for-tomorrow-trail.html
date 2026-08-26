@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trees For Tomorrow — Hike Los Angeles</title>
+<meta name="description" content="Trees For Tomorrow is a U.S. Forest Service trail in the Angeles National Forest, 0.71 miles long (Trail Class 4).">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html?region=San+Jacinto+Mountains">San Jacinto Mountains</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="#">Camps</a></li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Trees For Tomorrow</div>
+  <h1 class="page-title">Trees For Tomorrow</h1>
+  <p class="page-subtitle">Trees For Tomorrow is a U.S. Forest Service trail in the Angeles National Forest, 0.71 miles long (Trail Class 4).</p>
+
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Trail Number</th><td>1312W03D</td></tr>
+            <tr><th>Length</th><td>0.71 mi (1 mapped segment)</td></tr>
+            <tr><th>USFS Trail Class</th><td>4</td></tr>
+            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr>
+            <tr><th>Typical Grade</th><td>10-12%</td></tr>
+            <tr><th>Typical Tread Width</th><td>TW03 - 18-24 INCHES</td></tr>
+            <tr><th>Hiking / Pedestrian</th><td>Yes</td></tr>
+            <tr><th>Equestrian / Pack Saddle</th><td>Not specified</td></tr>
+            <tr><th>Mountain Biking</th><td>Not specified</td></tr>
+            <tr><th>Motorized Use</th><td>No</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Trees For Tomorrow yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">Trail geometry and attributes from the U.S. Forest Service National Trail System (INFRA/EDW), Angeles National Forest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.15283303499996, 34.27036785900003], [-118.15271703699995, 34.27051062700008], [-118.15266647299995, 34.27054631900006], [-118.15257724299994, 34.27063852300006], [-118.15249693699997, 34.270680163000065], [-118.15229765599997, 34.27073667500008], [-118.15222032399998, 34.27076344400007], [-118.15217570899995, 34.27081400800006], [-118.15216083799999, 34.270870520000074], [-118.15210432599997, 34.27091216100007], [-118.15205376199998, 34.270950826000046], [-118.15189909699995, 34.27100733900005], [-118.151643305, 34.27109954400004], [-118.15147674299999, 34.27116497900005], [-118.151402384, 34.27116795300003], [-118.15129530899998, 34.27116795300003], [-118.15122094999998, 34.27118877300006], [-118.15112279699997, 34.27122743900003], [-118.150902697, 34.27129287400004], [-118.15076290399998, 34.271334515000035], [-118.15062905999997, 34.27131369500006], [-118.15050711199996, 34.271304772000065], [-118.15042977899998, 34.27128692500003], [-118.150200757, 34.27123041300007], [-118.15007880899998, 34.27121851600003], [-118.14996281099997, 34.271224465000046], [-118.14984681199996, 34.27118877300006], [-118.14974270999994, 34.27113226100005], [-118.14969214599995, 34.27110549200006], [-118.14964753099997, 34.27107872300007], [-118.14959696899996, 34.27105492800007], [-118.14949881599995, 34.27104600500007], [-118.149376868, 34.271063852000054], [-118.14927574099994, 34.27111144100007], [-118.14920435699997, 34.271108466000044], [-118.14912999899997, 34.27109062100004], [-118.14904076899995, 34.27112036300008], [-118.148927744, 34.27113821000006], [-118.14883256599995, 34.271162004000075], [-118.14875225999998, 34.271203644000025], [-118.14868087499997, 34.271236362000025], [-118.14861841499999, 34.27124825900006], [-118.14854108199995, 34.27124231100004], [-118.14845780199994, 34.27126313100007], [-118.14832693099999, 34.27128395100004], [-118.14822877799998, 34.27131964300003], [-118.1481336, 34.27136128400008], [-118.14805329199999, 34.27136425800006], [-118.14795811399995, 34.271334515000035], [-118.14782426899995, 34.27131369400007], [-118.14771421999995, 34.271301797000035], [-118.14762796499997, 34.27131369500006], [-118.147550632, 34.271337490000064], [-118.14749411899999, 34.271370207000075], [-118.14749114499995, 34.27139697600006], [-118.14754468399997, 34.27142077000008], [-118.14764878499994, 34.27147133400007], [-118.14776180899997, 34.27150107700004], [-118.14781832099999, 34.27151], [-118.14790457699996, 34.27153676900008], [-118.14799677999997, 34.27156948700008], [-118.14811872799999, 34.27159328100004], [-118.14817821399998, 34.27158733300007], [-118.14826447099995, 34.27159328100004], [-118.14836262299997, 34.271590307000054], [-118.14846969899997, 34.27158733300007], [-118.14848159599995, 34.27156651200005], [-118.14850241599999, 34.271557589000054], [-118.14859461999998, 34.27154866600006], [-118.148692773, 34.27154866700005], [-118.14877605499998, 34.27155461500007], [-118.14883554099998, 34.27155461500007], [-118.14888015599996, 34.271542718000035], [-118.14894261599994, 34.271530820000066], [-118.14899912899995, 34.271524871000054], [-118.14905266699998, 34.27150405100008], [-118.14914784499996, 34.27149215400004], [-118.14925789499995, 34.271480257000064], [-118.1493501, 34.271480257000064], [-118.14942148299997, 34.27149512900007], [-118.14948096899997, 34.27151892300003], [-118.149525585, 34.27151892300003], [-118.14956722499994, 34.271527846000026], [-118.14965348099997, 34.271527846000026], [-118.14979029999995, 34.271530821000056], [-118.149959836, 34.27155164100003], [-118.15014424399999, 34.27156651200005], [-118.15023942199997, 34.271563538000066], [-118.15030783299994, 34.27158733300007], [-118.15040003599995, 34.27162302500005], [-118.15050413799997, 34.27163492200003], [-118.15057849599998, 34.27163789600007], [-118.15063798299997, 34.27166169100008], [-118.15069449499998, 34.27164979400004], [-118.15074803199997, 34.271652768000024], [-118.150819416, 34.27166169100008], [-118.15087295499995, 34.27163492200003], [-118.15088782599997, 34.27158138400006], [-118.15091459499996, 34.271510001000024], [-118.15096515799996, 34.27149215500003], [-118.15100679899996, 34.27150702600005], [-118.15103059299997, 34.27153676900008], [-118.15107520799995, 34.27156948700008], [-118.1511109, 34.271596256000066], [-118.15114064399995, 34.271596256000066], [-118.15117633499995, 34.27157246100006], [-118.15123879699996, 34.27153379500004], [-118.15130423199997, 34.27149215500003], [-118.15136669299994, 34.27144159100004], [-118.15143807699997, 34.27139697600006], [-118.15149756299996, 34.27139697500007], [-118.15157192099997, 34.271402925000075], [-118.15161356199997, 34.27143564200003], [-118.15167602199995, 34.27145348800008], [-118.15174740599997, 34.271447540000054], [-118.15183663599998, 34.27142671900003], [-118.15196155799998, 34.27139400200008], [-118.15201806899995, 34.27136425800006], [-118.15205078799994, 34.27135236100003], [-118.15209242799995, 34.27134343800003], [-118.15211622299995, 34.27129584800008], [-118.15214001699997, 34.27125123400003], [-118.152202478, 34.27124231100004], [-118.15223519499995, 34.27123041400006], [-118.152294682, 34.27121256800007], [-118.15235119399995, 34.27118877300006], [-118.15241662999995, 34.271162004000075], [-118.15249693599998, 34.271141183000054], [-118.152645652, 34.271096569000065], [-118.15269919099995, 34.271060877000025], [-118.15275272799994, 34.27104303100003], [-118.15283006099997, 34.27104005700005], [-118.15298175199996, 34.27099544200007], [-118.15307098099998, 34.27095677500006], [-118.153118571, 34.27092703200003], [-118.15318103099997, 34.27081698200004], [-118.15320482599998, 34.27079913700004], [-118.153261338, 34.270808059000046], [-118.15336246599998, 34.27081995700007], [-118.15346359199998, 34.27084672600006], [-118.15352605399994, 34.27084375100003], [-118.15355579699997, 34.27084970000004], [-118.15357959099998, 34.27087052100006], [-118.15355921699995, 34.27089178600005]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#A8503B', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>
