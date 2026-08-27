@@ -7,7 +7,14 @@
 <meta name="description" content="A community-driven directory of hiking trails, peaks, springs and trail conditions across the San Gabriel and Santa Monica Mountains near Los Angeles.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
 <link rel="stylesheet" href="style.css">
+<style>
+.map-label { background:#FBFAF4; border:1px solid #B7B097; border-radius:2px; padding:1px 5px; font-family:Arial,sans-serif; font-size:10.5px; color:#2B2A22; box-shadow:0 1px 2px rgba(0,0,0,0.2); }
+.map-label::before { display:none; }
+</style>
 </head>
 <body>
 
@@ -292,28 +299,38 @@ OV_TRAILS.forEach(t => {
 });
 trailLayer.addTo(overviewMap);
 
-const peakLayer = L.layerGroup();
-OV_PEAKS.forEach(p => {
-  const m = L.circleMarker([p.lat,p.lng], { radius:4, color:'#A8503B', fillColor:'#A8503B', fillOpacity:0.9, weight:1 });
-  m.bindPopup(`<strong><a href="${p.slug}">${p.name}</a></strong> &middot; Peak`);
-  m.addTo(peakLayer);
-});
+function emojiIcon(emoji){
+  return L.divIcon({
+    html: `<div style="font-size:18px;line-height:1;filter:drop-shadow(0 1px 1px rgba(0,0,0,0.5));">${emoji}</div>`,
+    className: '', iconSize:[22,22], iconAnchor:[11,11]
+  });
+}
+
+function buildCluster(list, emoji, kind, clusterColor){
+  const cluster = L.markerClusterGroup({
+    maxClusterRadius: 50,
+    iconCreateFunction: function(c){
+      const count = c.getChildCount();
+      return L.divIcon({
+        html: `<div style="position:relative;background:${clusterColor};color:#F1EDD9;border:2px solid #F1EDD9;border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:1px 2px 4px rgba(0,0,0,0.35);">${emoji}<span style="position:absolute;bottom:-6px;right:-6px;background:#B5892B;color:#1E1B14;border-radius:8px;padding:0 4px;font-size:9px;font-family:Arial,sans-serif;font-weight:bold;">${count}</span></div>`,
+        className: '', iconSize:[34,34]
+      });
+    }
+  });
+  list.forEach(item => {
+    const marker = L.marker([item.lat, item.lng], { icon: emojiIcon(emoji) });
+    marker.bindTooltip(item.name, { permanent:true, direction:'top', offset:[0,-10], className:'map-label' });
+    marker.bindPopup(`<strong><a href="${item.slug}">${item.name}</a></strong> &middot; ${kind}`);
+    cluster.addLayer(marker);
+  });
+  return cluster;
+}
+
+const peakLayer = buildCluster(OV_PEAKS, '🏔️', 'Peak', '#A8503B');
+const springLayer = buildCluster(OV_SPRINGS, '💧', 'Spring', '#3B6FA6');
+const campLayer = buildCluster(OV_CAMPS, '⛺', 'Camp', '#B5892B');
 peakLayer.addTo(overviewMap);
-
-const springLayer = L.layerGroup();
-OV_SPRINGS.forEach(s => {
-  const m = L.circleMarker([s.lat,s.lng], { radius:4, color:'#3B6FA6', fillColor:'#3B6FA6', fillOpacity:0.9, weight:1 });
-  m.bindPopup(`<strong><a href="${s.slug}">${s.name}</a></strong> &middot; Spring`);
-  m.addTo(springLayer);
-});
 springLayer.addTo(overviewMap);
-
-const campLayer = L.layerGroup();
-OV_CAMPS.forEach(c => {
-  const m = L.circleMarker([c.lat,c.lng], { radius:4, color:'#B5892B', fillColor:'#B5892B', fillOpacity:0.9, weight:1 });
-  m.bindPopup(`<strong><a href="${c.slug}">${c.name}</a></strong> &middot; Camp`);
-  m.addTo(campLayer);
-});
 campLayer.addTo(overviewMap);
 
 document.getElementById('toggleTrails').addEventListener('change', e => {
@@ -329,6 +346,7 @@ document.getElementById('toggleCamps').addEventListener('change', e => {
   if(e.target.checked) overviewMap.addLayer(campLayer); else overviewMap.removeLayer(campLayer);
 });
 </script>
+
 
 </body>
 </html>
