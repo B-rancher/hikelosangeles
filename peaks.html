@@ -49,7 +49,6 @@
           <a href="trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="trails.html?region=Griffith+Park">Griffith Park</a>
-          <a href="trails.html?region=San+Jacinto+Mountains">San Jacinto Mountains</a>
           <a href="trails.html">View All Trails &rarr;</a>
         </div>
       </li>
@@ -92,7 +91,7 @@
     <div class="panel-head">Peaks & Summits List <span class="viewall" id="gridCount"></span></div>
     <div class="panel-body" style="overflow-x:auto;">
       <table class="pt-table" id="ptTable">
-        <thead><tr><th></th><th>Name</th><th>County</th><th>USGS Quad</th><th>Elevation</th></tr></thead>
+        <thead><tr><th></th><th>Name</th><th>County</th><th>USGS Quad</th><th>Elevation (m)</th></tr></thead>
         <tbody id="ptBody"></tbody>
       </table>
     </div>
@@ -138,7 +137,7 @@ function renderMarkers(list){
   markers.forEach(m=>map.removeLayer(m)); markers=[];
   list.forEach(d=>{
     const marker = L.circleMarker([d.lat,d.lng], { radius:5, color:'#A8503B', fillColor:'#A8503B', fillOpacity:0.85, weight:1.5 }).addTo(map);
-    marker.bindPopup(`<strong><a href="${d.slug}">${d.name}</a></strong><br>${d.elev ? d.elev.toLocaleString()+' ft' : ''} &middot; ${d.quad} Quad`);
+    marker.bindPopup(`<strong><a href="${d.slug}">${d.name}</a></strong><br>${d.elev ? d.elev.toLocaleString()+' m' : ''} &middot; ${d.quad} Quad`);
     markers.push(marker);
   });
 }
@@ -156,7 +155,7 @@ function renderTable(list){
       <td><a href="${d.slug}">${d.name}</a></td>
       <td>${d.county}</td>
       <td>${d.quad}</td>
-      <td>${d.elev ? d.elev.toLocaleString()+' ft' : '—'}</td>
+      <td>${d.elev ? d.elev.toLocaleString()+' m' : '—'}</td>
     </tr>
   `).join('');
 }
