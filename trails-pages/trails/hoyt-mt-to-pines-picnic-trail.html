@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoyt Mt. To Pines Picnic Trail — Hike Los Angeles</title>
+<meta name="description" content="Hoyt Mt. To Pines Picnic Trail is a U.S. Forest Service trail in the Angeles National Forest, 0.66 miles long (Trail Class 1).">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Hoyt Mt. To Pines Picnic Trail</div>
+  <h1 class="page-title">Hoyt Mt. To Pines Picnic Trail</h1>
+  <p class="page-subtitle">Hoyt Mt. To Pines Picnic Trail is a U.S. Forest Service trail in the Angeles National Forest, 0.66 miles long (Trail Class 1).</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Trail Number</th><td>12W04A</td></tr>
+            <tr><th>Length</th><td>0.66 mi (1 mapped segment)</td></tr>
+            <tr><th>USFS Trail Class</th><td>1</td></tr>
+            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr>
+            <tr><th>Typical Grade</th><td>10-12%</td></tr>
+            <tr><th>Typical Tread Width</th><td>TW03 - 18-24 INCHES</td></tr>
+            <tr><th>Hiking / Pedestrian</th><td>Not specified</td></tr>
+            <tr><th>Equestrian / Pack Saddle</th><td>Not specified</td></tr>
+            <tr><th>Mountain Biking</th><td>Not specified</td></tr>
+            <tr><th>Motorized Use</th><td>No</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Hoyt Mt. To Pines Picnic Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">Trail geometry and attributes from the U.S. Forest Service National Trail System (INFRA/EDW), Angeles National Forest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.16686069499997, 34.27322176700005], [-118.16682976199996, 34.27323604400004], [-118.16677741299998, 34.27324080300008], [-118.16673696199996, 34.273238423000066], [-118.166720307, 34.273195593000025], [-118.16668937299994, 34.273169418000066], [-118.16663702499994, 34.27315276200005], [-118.16658943599998, 34.27314324500003], [-118.16654660599994, 34.27313848600005], [-118.16648711899995, 34.273119450000024], [-118.16646094499998, 34.273107553000045], [-118.16643477099996, 34.27310993200007], [-118.16643239099994, 34.27314086500007], [-118.166432392, 34.27318607500007], [-118.16645142699997, 34.27322890500005], [-118.16646570399996, 34.27325983900005], [-118.16647998099995, 34.273293151000075], [-118.16648473999999, 34.27333598100006], [-118.16647760099994, 34.273366914000064], [-118.16645618599995, 34.27339546800005], [-118.16642287399998, 34.27340974500004], [-118.16638956099996, 34.273407365000025], [-118.16633483399994, 34.27336453500004], [-118.16627534699995, 34.27332408400002], [-118.16622061899994, 34.27327887400003], [-118.16618730699997, 34.27324556200006], [-118.16607071399994, 34.27315990100004], [-118.16600646799998, 34.27314562400005], [-118.16596601699996, 34.27312182900005], [-118.16593032599997, 34.27307424000003], [-118.16590415099995, 34.27301475400003], [-118.16589225399997, 34.27294812900004], [-118.16589463399998, 34.27287436600005], [-118.165894633, 34.27278156700004], [-118.16584466499995, 34.27260072800004], [-118.16579469599998, 34.27229377700007], [-118.16579469599998, 34.272205737000036], [-118.16577328099999, 34.27212721500007], [-118.16573045099994, 34.272029657000076], [-118.16568048199997, 34.27198444800007], [-118.16561385799997, 34.271886890000076], [-118.16555437099998, 34.27183454200008], [-118.16546870999997, 34.271851197000046], [-118.16543063899996, 34.27188213000005], [-118.165404465, 34.27192971900007], [-118.16539732599995, 34.27200348300005], [-118.16540684399996, 34.27207010800004], [-118.16542825999994, 34.272129594000035], [-118.16543301799999, 34.272179563000066], [-118.16543301799999, 34.27222239300005], [-118.16540922399997, 34.27227474100005], [-118.16536401399998, 34.272315193000054], [-118.16529024999994, 34.27235802300004], [-118.16520934799996, 34.27238657600003], [-118.16514986299995, 34.272396094000044], [-118.16511416999998, 34.27235326400006], [-118.16509513399996, 34.272272362000024], [-118.16508085799995, 34.272136733000025], [-118.16506182199998, 34.27203917500003], [-118.165040407, 34.27194875600003], [-118.16499995699996, 34.27188926900004], [-118.16496664399995, 34.27186071500006], [-118.16493095199996, 34.27186071600005], [-118.16488098399998, 34.27188926800005], [-118.16486432699998, 34.27192971900007], [-118.16485004999998, 34.27199158600007], [-118.16484291199998, 34.27205107200007], [-118.16483339399997, 34.272096282000064], [-118.16479056299994, 34.27217718400004], [-118.16474773399995, 34.27226998300006], [-118.16469776399998, 34.272348504000036], [-118.16462400199998, 34.27244606200003], [-118.16456213599997, 34.27252458500004], [-118.16453833999998, 34.27257693400003], [-118.16452168399996, 34.27263166000006], [-118.16451930499994, 34.272695906000024], [-118.16452882299996, 34.27278632600007], [-118.164547858, 34.27285771000004], [-118.16455023799995, 34.272945750000076], [-118.16453833999998, 34.27301475400003], [-118.16447647399997, 34.27305520500005], [-118.16439319399996, 34.27307899900006], [-118.16434084599996, 34.27308375800004], [-118.16429087599994, 34.27306234300005], [-118.164259943, 34.273031410000044], [-118.16423852899999, 34.272976682000035], [-118.16423614899998, 34.272914816000025], [-118.16423376899996, 34.27285770900005], [-118.16420759599998, 34.27281250000004], [-118.16413859199997, 34.27278394600006], [-118.16402437699998, 34.272757772000034], [-118.16391968099998, 34.27274825400008], [-118.16384353799998, 34.27274111600008], [-118.16375787799996, 34.27273635700004], [-118.16370790899998, 34.272753013000056], [-118.16366983699999, 34.27277442900004], [-118.16363414499995, 34.27279108400006], [-118.16360559099996, 34.27279108500005], [-118.16355562299998, 34.272772048000036], [-118.16351517199996, 34.27272921800005], [-118.16345806499999, 34.272676871000044], [-118.16337716399994, 34.27265545500006], [-118.16330577999997, 34.27265307600004], [-118.163270088, 34.27264117800007], [-118.16320822199998, 34.272636420000026], [-118.16312018099995, 34.27264117800007], [-118.16301072699997, 34.27263641900004], [-118.16294648099995, 34.27263879900005], [-118.16290127099995, 34.272657835000075], [-118.16284178499996, 34.272669732000054], [-118.16277515999997, 34.272684009000045], [-118.16268474099996, 34.272698286000036], [-118.16259670099998, 34.27270542400004], [-118.16250866099995, 34.27271256200004], [-118.16241824099995, 34.27272446000006], [-118.16206370099997, 34.272779187000026], [-118.16193758999998, 34.27279584400003], [-118.16178768399999, 34.27281250000004], [-118.16164729599996, 34.27285771000004], [-118.16156401399996, 34.272881504000054], [-118.16151880399997, 34.27289340100003], [-118.16148787199995, 34.27289102200007], [-118.16145931799997, 34.272876745000076], [-118.16145931799997, 34.27285295100006], [-118.16148549199994, 34.27282915600006], [-118.16154259899997, 34.272800602000075], [-118.16162587999997, 34.27271732100007], [-118.16169250499996, 34.27264831700006], [-118.16173771499996, 34.27256979500004], [-118.16175675099998, 34.27253648200008], [-118.16177340699994, 34.27249365200004], [-118.161811479, 34.272460340000066], [-118.16185192899997, 34.272457960000054], [-118.16190189699995, 34.27243416600004], [-118.16193045199998, 34.272398474000056], [-118.161954246, 34.27234612500007], [-118.16196376399995, 34.27231043300003], [-118.16197566099999, 34.27228188000004], [-118.16202087, 34.27225094700003], [-118.16207083999996, 34.27222239300005], [-118.16214460299994, 34.27218194200003], [-118.16217077699997, 34.27215576900005], [-118.16219219199996, 34.27212007700007], [-118.162211228, 34.272060590000024], [-118.16221360699996, 34.27200348300005], [-118.16220170999998, 34.27192734000005], [-118.16219219199996, 34.27188451000006], [-118.16219219299995, 34.27183216200007], [-118.16218505399996, 34.27177267500008], [-118.16215412099996, 34.27171556800005]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#A8503B', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

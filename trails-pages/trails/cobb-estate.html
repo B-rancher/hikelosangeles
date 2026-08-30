@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cobb Estate — Hike Los Angeles</title>
+<meta name="description" content="Cobb Estate is a U.S. Forest Service trail in the Angeles National Forest, 0.35 miles long (Trail Class 4).">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Cobb Estate</div>
+  <h1 class="page-title">Cobb Estate</h1>
+  <p class="page-subtitle">Cobb Estate is a U.S. Forest Service trail in the Angeles National Forest, 0.35 miles long (Trail Class 4).</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Trail Number</th><td>12W15</td></tr>
+            <tr><th>Length</th><td>0.35 mi (1 mapped segment)</td></tr>
+            <tr><th>USFS Trail Class</th><td>4</td></tr>
+            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr>
+            <tr><th>Typical Grade</th><td>10-12%</td></tr>
+            <tr><th>Typical Tread Width</th><td>TW03 - 18-24 INCHES</td></tr>
+            <tr><th>Hiking / Pedestrian</th><td>Yes</td></tr>
+            <tr><th>Equestrian / Pack Saddle</th><td>Not specified</td></tr>
+            <tr><th>Mountain Biking</th><td>Not specified</td></tr>
+            <tr><th>Motorized Use</th><td>No</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Cobb Estate yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">Trail geometry and attributes from the U.S. Forest Service National Trail System (INFRA/EDW), Angeles National Forest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.12911236999997, 34.20406243800005], [-118.12905946799998, 34.20418337800004], [-118.12895122999998, 34.20458526400006], [-118.12889861599996, 34.204775030000064], [-118.128892668, 34.204873184000064], [-118.12888374499994, 34.204923747000066], [-118.12888374499994, 34.20497431000007], [-118.12890456599996, 34.20502487400006], [-118.12897594999998, 34.205099233000055], [-118.12902353799996, 34.20514979600006], [-118.12905625599996, 34.205191436000064], [-118.12907410199995, 34.20523307700006], [-118.12907410199995, 34.205271743000026], [-118.12905030699994, 34.205319332000045], [-118.12900569199996, 34.20537881900003], [-118.12893728299997, 34.20542343400007], [-118.12888671899998, 34.20544127900007], [-118.12881236099997, 34.205450203000055], [-118.12872610599999, 34.20544127900007], [-118.12864282499999, 34.20544128000006], [-118.12856251699998, 34.20544425400004], [-118.12847923699996, 34.20545615200007], [-118.128425699, 34.20547697200004], [-118.12836918599999, 34.20550671500007], [-118.12831862299998, 34.205545381000036], [-118.12827103399997, 34.20560486800008], [-118.12819072599996, 34.205723840000076], [-118.12810149799998, 34.205789276000075], [-118.12799442099998, 34.20582794200004], [-118.12791411499995, 34.205830916000025], [-118.12781596199994, 34.205819019000046], [-118.12769698799997, 34.20577737900004], [-118.12755124699999, 34.205691123000065], [-118.12739360799998, 34.20560784200006], [-118.12736088999998, 34.205581073000076], [-118.12735196699998, 34.20555430400003], [-118.12735196699998, 34.205512664000025], [-118.12738170999995, 34.205450202000065], [-118.12739955599994, 34.205384767000055], [-118.12741442799995, 34.20531338400008], [-118.12743524799998, 34.20524794900007], [-118.12747688899998, 34.20521225700003], [-118.12751852899999, 34.20517061600003], [-118.12755422099997, 34.205131950000066], [-118.12757206799995, 34.205078412000034], [-118.12759883599995, 34.205012977000024], [-118.12766724599999, 34.204938619000075], [-118.127741604, 34.204870209000035], [-118.12780406499996, 34.204825594000056], [-118.12789329399999, 34.20478395400005], [-118.12797954999996, 34.204760159000045], [-118.12816395799996, 34.20468877500008], [-118.12826211099997, 34.20463821200008], [-118.12831564899994, 34.204584674000046], [-118.12840487899996, 34.20448354700005], [-118.12850303099998, 34.204388368000025], [-118.12856251799997, 34.20431995900003], [-118.128624979, 34.20422478000006], [-118.12864877299995, 34.20415934500005], [-118.12865472199996, 34.20411473000007], [-118.12865769599995, 34.20407903800003], [-118.12867554199994, 34.20403442400004], [-118.12869338799999, 34.204007655000055], [-118.12871194799999, 34.203993378000064]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#A8503B', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

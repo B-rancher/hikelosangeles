@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creekside — Hike Los Angeles</title>
+<meta name="description" content="Creekside is a U.S. Forest Service trail in the Angeles National Forest, 0.48 miles long (Trail Class 4).">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Creekside</div>
+  <h1 class="page-title">Creekside</h1>
+  <p class="page-subtitle">Creekside is a U.S. Forest Service trail in the Angeles National Forest, 0.48 miles long (Trail Class 4).</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Trail Number</th><td>11W11</td></tr>
+            <tr><th>Length</th><td>0.48 mi (1 mapped segment)</td></tr>
+            <tr><th>USFS Trail Class</th><td>4</td></tr>
+            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr>
+            <tr><th>Typical Grade</th><td>10-12%</td></tr>
+            <tr><th>Typical Tread Width</th><td>TW03 - 18-24 INCHES</td></tr>
+            <tr><th>Hiking / Pedestrian</th><td>Yes</td></tr>
+            <tr><th>Equestrian / Pack Saddle</th><td>Not specified</td></tr>
+            <tr><th>Mountain Biking</th><td>Not specified</td></tr>
+            <tr><th>Motorized Use</th><td>No</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Creekside yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">Trail geometry and attributes from the U.S. Forest Service National Trail System (INFRA/EDW), Angeles National Forest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.00577983, 34.32683455200004], [-118.00573521499996, 34.32684347500003], [-118.00568167799997, 34.32684347600008], [-118.005613268, 34.32680778400004], [-118.00549132099997, 34.326772092000056], [-118.005378297, 34.326772092000056], [-118.00516414499998, 34.326786963000075], [-118.00496486499998, 34.326819681000075], [-118.00482804599994, 34.32684050100005], [-118.00473286699997, 34.32684644900007], [-118.00466445799998, 34.326849424000045], [-118.004578203, 34.32684347500003], [-118.00447707499995, 34.32682265500006], [-118.00440569199998, 34.326819681000075], [-118.00435215399995, 34.32684347600008], [-118.00427184699998, 34.32687321900005], [-118.00420938599996, 34.32689106400005], [-118.00412610499995, 34.326894039000024], [-118.00403984899998, 34.326894039000024], [-118.00391195299994, 34.32687619300003], [-118.00382569799996, 34.32685834700004], [-118.00373944199998, 34.326849424000045], [-118.00365021299996, 34.32684644900007], [-118.00356693199996, 34.32686727000004], [-118.00348067599998, 34.32690593600006], [-118.00339442099994, 34.326959474000034], [-118.00323083299998, 34.327078447000076], [-118.00314457699994, 34.32716470300005], [-118.00309698799998, 34.32730747000005], [-118.003046424, 34.32745321200008], [-118.00297801499994, 34.32758705700007], [-118.00292150299998, 34.32766141500008], [-118.00287986199999, 34.32773577300003], [-118.00283822199998, 34.32777146500007], [-118.00279063199997, 34.32779525900003], [-118.00275493999999, 34.327798234000056], [-118.00272519699996, 34.32776849100003], [-118.00272519699996, 34.327732799000046], [-118.002751967, 34.32769710700006], [-118.00279658099998, 34.32764356900003], [-118.002811453, 34.32759003100006], [-118.00282037599999, 34.32747998100007], [-118.00282335099996, 34.32738777700007], [-118.00282334999997, 34.32728962400006], [-118.00282632499994, 34.32717957400007], [-118.00282037599999, 34.327102242000024], [-118.00281740199995, 34.32705167900008], [-118.00281740199995, 34.326977320000026], [-118.00285904199995, 34.32689998800004], [-118.00289770899997, 34.32682562900004], [-118.00291852799995, 34.32672747600003], [-118.00294827099998, 34.32666501500006], [-118.00298396399995, 34.326626350000026], [-118.00304047599997, 34.32659660600007], [-118.00310591099998, 34.326531171000056], [-118.00316539699998, 34.326447890000054], [-118.00323380699996, 34.32639435200008], [-118.00327544699996, 34.32636460900005], [-118.003320063, 34.32635271100003], [-118.00335575399998, 34.326370558000065], [-118.00339442099994, 34.32637948100006], [-118.003436062, 34.326367583000035], [-118.00345390799998, 34.32633189200004], [-118.003513393, 34.326305122000065], [-118.00362344399997, 34.32631404500006], [-118.00373944299997, 34.32634081400005], [-118.00380785199997, 34.326382455000044], [-118.00385544099998, 34.326415172000054], [-118.00390600499998, 34.326447890000054], [-118.00400713199997, 34.326480608000054], [-118.00412015699999, 34.32650142800003], [-118.00421533399998, 34.32652522200004], [-118.00428076999998, 34.32655794000004], [-118.004337282, 34.32659065800004], [-118.00437, 34.32659065800004], [-118.00440866599996, 34.326575786000035], [-118.00450681899997, 34.32656686300004], [-118.00459604799994, 34.32655794000004], [-118.00470609899997, 34.326546043000064], [-118.00481317499998, 34.32651630000004], [-118.00491132699995, 34.32650440200007], [-118.00500650599997, 34.32648953100005], [-118.005054095, 34.32650440200007], [-118.00512547799997, 34.32654901700005], [-118.00519983699996, 34.326578761000064], [-118.00529501499994, 34.32660255500008], [-118.00532475899996, 34.32662040100007], [-118.00540803999996, 34.32663824700006], [-118.00547942399999, 34.326641221000045], [-118.00557757699994, 34.326641221000045], [-118.00569059999998, 34.32663824700006], [-118.005896012, 34.32664826600006]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#A8503B', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>
