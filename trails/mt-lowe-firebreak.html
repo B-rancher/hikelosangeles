@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mt. Lowe Firebreak — Hike Los Angeles</title>
+<meta name="description" content="Mt. Lowe Firebreak is a 1.52-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Mt. Lowe Firebreak</div>
+  <h1 class="page-title">Mt. Lowe Firebreak</h1>
+  <p class="page-subtitle">Mt. Lowe Firebreak is a 1.52-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>1.52 mi (1 mapped segment)</td></tr>
+            <tr><th>Surface</th><td>Not specified</td></tr><tr><th>Difficulty (SAC scale)</th><td>demanding_mountain_hiking</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Mt. Lowe Firebreak yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.1025516, 34.2155368], [-118.1024539, 34.2152467], [-118.1024035, 34.2149095], [-118.102371, 34.2147081], [-118.1023784, 34.2144711], [-118.1026078, 34.214243], [-118.1027343, 34.2141078], [-118.1029932, 34.2139568], [-118.1028658, 34.213463], [-118.1027699, 34.2133876], [-118.1027822, 34.2133311], [-118.1027598, 34.2129488], [-118.1026854, 34.2127119], [-118.1025666, 34.2126423], [-118.1026519, 34.2124909], [-118.1025199, 34.2122623], [-118.1029194, 34.2120639], [-118.1030029, 34.2119135], [-118.1033781, 34.2118018], [-118.1035737, 34.2115973], [-118.1036058, 34.2114268], [-118.103662, 34.211396], [-118.1042849, 34.211095], [-118.1045189, 34.2109301], [-118.1046352, 34.2109028], [-118.1048272, 34.2109629], [-118.1048861, 34.210808], [-118.1048887, 34.2106661], [-118.1048967, 34.210566], [-118.1050516, 34.2103869], [-118.1051881, 34.2103074], [-118.1054654, 34.2099198], [-118.105602, 34.2098293], [-118.1056644, 34.2096463], [-118.1058578, 34.209588], [-118.1059467, 34.2094707], [-118.1061055, 34.2093062], [-118.1063445, 34.2090439], [-118.1064658, 34.2088919], [-118.106711, 34.208783], [-118.1068439, 34.2086683], [-118.1071111, 34.2084682], [-118.1072572, 34.2082983], [-118.1073261, 34.2081198], [-118.1074672, 34.2079433], [-118.1074498, 34.2077724], [-118.1075498, 34.2077042], [-118.1074082, 34.2076731], [-118.107292, 34.2075327], [-118.1072676, 34.2073649], [-118.1071391, 34.2071795], [-118.1069884, 34.2070606], [-118.1069709, 34.2069554], [-118.1070471, 34.2067425], [-118.1069311, 34.2066042], [-118.1070409, 34.2065209], [-118.1068563, 34.2064635], [-118.1068017, 34.2064306], [-118.1065251, 34.2064715], [-118.1065065, 34.2063636], [-118.1065976, 34.2063045], [-118.1064448, 34.2060633], [-118.1065484, 34.2057545], [-118.1066055, 34.205573], [-118.1066527, 34.205407], [-118.1067461, 34.205269], [-118.1069639, 34.2051972], [-118.1071808, 34.2050843], [-118.1072654, 34.2048033], [-118.107456, 34.2044327], [-118.1075967, 34.2042555], [-118.1076554, 34.2040986], [-118.1078738, 34.2039652], [-118.1079404, 34.203873], [-118.1079935, 34.2036634], [-118.1081176, 34.2035381], [-118.108169, 34.2034346], [-118.1081767, 34.2032809], [-118.1082079, 34.2032278], [-118.1083934, 34.203221], [-118.1085883, 34.2032878], [-118.1088185, 34.2032373], [-118.1093902, 34.202784], [-118.1094756, 34.2027106], [-118.1095124, 34.2026582], [-118.1095875, 34.2025776], [-118.109711, 34.2024311], [-118.1097579, 34.2022303], [-118.1098459, 34.2020663], [-118.1098465, 34.2018935], [-118.1098788, 34.2017746], [-118.1099016, 34.2016237], [-118.1098518, 34.2014617], [-118.1098524, 34.201399], [-118.1097074, 34.2012829], [-118.1096901, 34.2011333], [-118.1096353, 34.2010238], [-118.1094034, 34.2008723], [-118.1092728, 34.2008555], [-118.1091538, 34.2007187], [-118.1090883, 34.2006992], [-118.1090142, 34.2006162], [-118.1089005, 34.2004636], [-118.1088128, 34.200305], [-118.1089024, 34.2001559], [-118.1088965, 34.2000943], [-118.1087612, 34.1999755], [-118.1088037, 34.1998512], [-118.1087549, 34.1996322], [-118.1085993, 34.1993906], [-118.1085614, 34.1991957], [-118.1086163, 34.1990697], [-118.1086101, 34.1990145], [-118.108653, 34.1988796], [-118.1086251, 34.198821], [-118.1086895, 34.1987296], [-118.1086658, 34.1986701], [-118.1086488, 34.1985729]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabrilieno Trail / Silver Moccasin Trail — Hike Los Angeles</title>
+<meta name="description" content="Gabrilieno Trail / Silver Moccasin Trail is a 2.53-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Gabrilieno Trail / Silver Moccasin Trail</div>
+  <h1 class="page-title">Gabrilieno Trail / Silver Moccasin Trail</h1>
+  <p class="page-subtitle">Gabrilieno Trail / Silver Moccasin Trail is a 2.53-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>2.53 mi (1 mapped segment)</td></tr>
+            <tr><th>Surface</th><td>unpaved</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Gabrilieno Trail / Silver Moccasin Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.0272229, 34.2323622], [-118.0273391, 34.2329838], [-118.0272702, 34.233144], [-118.0270925, 34.23329], [-118.0273042, 34.2332269], [-118.0275521, 34.2329758], [-118.027736, 34.2328747], [-118.0278608, 34.2328807], [-118.0280872, 34.2330112], [-118.0282646, 34.2331689], [-118.0278738, 34.2331684], [-118.0277875, 34.2333449], [-118.027571, 34.2335641], [-118.0276635, 34.2336024], [-118.0278468, 34.2335709], [-118.0280541, 34.2337911], [-118.0282439, 34.2338439], [-118.028435, 34.233818], [-118.0285666, 34.2338765], [-118.0289955, 34.2343008], [-118.0285756, 34.2342263], [-118.0284158, 34.2342489], [-118.0283349, 34.2343513], [-118.0285244, 34.2344188], [-118.0286696, 34.2345436], [-118.0289646, 34.2347183], [-118.0294734, 34.2349861], [-118.0294887, 34.2350602], [-118.0289991, 34.2351249], [-118.0292384, 34.2353674], [-118.0293268, 34.2355565], [-118.0296113, 34.2358937], [-118.0293327, 34.2359894], [-118.0293606, 34.2361076], [-118.0294158, 34.2361618], [-118.0295537, 34.2361749], [-118.0298885, 34.2361301], [-118.0294429, 34.2365858], [-118.0294488, 34.2366288], [-118.0295418, 34.2366256], [-118.0295202, 34.2370864], [-118.0296795, 34.2376124], [-118.0297542, 34.2376574], [-118.0298377, 34.2375216], [-118.0299129, 34.2375077], [-118.0300027, 34.2376754], [-118.0300745, 34.2382376], [-118.0302032, 34.2384702], [-118.0303019, 34.2385385], [-118.0303159, 34.2388224], [-118.0304675, 34.239241], [-118.0304422, 34.2394776], [-118.0307409, 34.2393592], [-118.0307623, 34.2392693], [-118.0309243, 34.2392624], [-118.0312385, 34.2393455], [-118.0313622, 34.2391928], [-118.0314512, 34.2391975], [-118.0314606, 34.2394973], [-118.0314182, 34.2394776], [-118.0316254, 34.239821], [-118.0317026, 34.2402025], [-118.0318326, 34.2403288], [-118.0320999, 34.2403524], [-118.0325452, 34.2404789], [-118.0331644, 34.2405486], [-118.0334617, 34.2406747], [-118.033545, 34.2404868], [-118.0336896, 34.2405433], [-118.0340041, 34.2407417], [-118.0341631, 34.2410297], [-118.0349432, 34.2416092], [-118.0351668, 34.2415571], [-118.0352494, 34.2412251], [-118.0353338, 34.2410635], [-118.0354107, 34.2410712], [-118.0354867, 34.2415545], [-118.0353361, 34.2418651], [-118.0353621, 34.2421098], [-118.0352909, 34.2423181], [-118.0354299, 34.2425722], [-118.0354239, 34.2427455], [-118.0355051, 34.2430072], [-118.0356758, 34.2431871], [-118.0359275, 34.2432595], [-118.0360741, 34.2431955], [-118.0364196, 34.2427204], [-118.0365339, 34.2426397], [-118.0367258, 34.2426344], [-118.0369164, 34.2423099], [-118.0370042, 34.2421614], [-118.0373328, 34.2419751], [-118.0377027, 34.2420389], [-118.0385201, 34.2425642], [-118.0389615, 34.2424455], [-118.0391639, 34.2425001], [-118.0395562, 34.2424791], [-118.0397073, 34.2425506], [-118.0398483, 34.2425128], [-118.0400999, 34.2425361], [-118.0401262, 34.2425882], [-118.0403516, 34.2424914], [-118.0405173, 34.2425333], [-118.0404946, 34.2425747], [-118.0405818, 34.2426086], [-118.040735, 34.2425654], [-118.0409398, 34.2424175], [-118.0416072, 34.2422941], [-118.0418209, 34.2423138], [-118.0421182, 34.2424074], [-118.0420286, 34.2425468], [-118.0421604, 34.2425732], [-118.0421737, 34.2426605], [-118.0421071, 34.2429365], [-118.0420321, 34.2430316], [-118.0420144, 34.2430495], [-118.0420817, 34.2431551], [-118.0421141, 34.2432694], [-118.0423853, 34.2435507], [-118.0427529, 34.2442551], [-118.0428253, 34.2443932], [-118.0431959, 34.244618], [-118.043228, 34.2447113], [-118.0432387, 34.2447397], [-118.0434493, 34.2447676], [-118.0438365, 34.2449432], [-118.0442835, 34.2453042], [-118.0446427, 34.2456503], [-118.0447617, 34.2457736], [-118.0451245, 34.2458986], [-118.0451649, 34.2460275], [-118.0452826, 34.246106], [-118.0455187, 34.2462226], [-118.0457754, 34.2462341], [-118.0459617, 34.2461604], [-118.0460001, 34.2461671], [-118.0463519, 34.2462274], [-118.0467223, 34.2460711], [-118.0468265, 34.2461006], [-118.046876, 34.2460895], [-118.0470515, 34.2458858], [-118.0473828, 34.2458001], [-118.0476134, 34.2457901], [-118.0478488, 34.2458271], [-118.0485763, 34.2460998], [-118.0487146, 34.2462124], [-118.0489394, 34.2463044], [-118.0490347, 34.2464048], [-118.049072, 34.2463459], [-118.0491818, 34.2463441], [-118.0492868, 34.2463352], [-118.0493544, 34.2463402], [-118.0494249, 34.2463598], [-118.0495229, 34.246397]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

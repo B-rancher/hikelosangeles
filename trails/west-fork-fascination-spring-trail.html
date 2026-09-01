@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West Fork Fascination Spring Trail — Hike Los Angeles</title>
+<meta name="description" content="West Fork Fascination Spring Trail is a 0.27-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; West Fork Fascination Spring Trail</div>
+  <h1 class="page-title">West Fork Fascination Spring Trail</h1>
+  <p class="page-subtitle">West Fork Fascination Spring Trail is a 0.27-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>0.27 mi (1 mapped segment)</td></tr>
+            <tr><th>Surface</th><td>Not specified</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for West Fork Fascination Spring Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.3252291, 34.2927184], [-118.3252336, 34.2927081], [-118.3252658, 34.2926505], [-118.3253087, 34.2925929], [-118.3253436, 34.2925685], [-118.3253811, 34.2925552], [-118.325471, 34.292543], [-118.3255287, 34.2925186], [-118.3256279, 34.2924533], [-118.3256923, 34.2924023], [-118.3257768, 34.2923192], [-118.3257942, 34.2922959], [-118.3257996, 34.292266], [-118.3258049, 34.292235], [-118.3258277, 34.292204], [-118.3258411, 34.2921863], [-118.3258425, 34.2921231], [-118.3258519, 34.2920533], [-118.325868, 34.2919857], [-118.3259068, 34.2919514], [-118.3259216, 34.2919469], [-118.3259363, 34.2919569], [-118.3259591, 34.2920012], [-118.325986, 34.2920223], [-118.3260275, 34.2920455], [-118.3260477, 34.2920876], [-118.3260731, 34.2922018], [-118.3261, 34.2922549], [-118.3261201, 34.292286], [-118.3261194, 34.292312], [-118.3261174, 34.2923336], [-118.3261194, 34.2923541], [-118.3261362, 34.2923646], [-118.3261529, 34.2923657], [-118.3262213, 34.2923225], [-118.3262884, 34.292286], [-118.3263119, 34.2922583], [-118.3263159, 34.2922411], [-118.3263005, 34.2922289], [-118.3262743, 34.2922156], [-118.3262414, 34.2921973], [-118.3262233, 34.2921818], [-118.3262187, 34.292163], [-118.3262354, 34.2921237], [-118.3262629, 34.2920782], [-118.3262777, 34.2920649], [-118.3263078, 34.2920483], [-118.3263695, 34.2920261], [-118.3264661, 34.2919879], [-118.3265291, 34.2919475], [-118.3265573, 34.291912], [-118.326566, 34.291891], [-118.3265566, 34.2918622], [-118.3265157, 34.2918317], [-118.3264815, 34.2918034], [-118.3264634, 34.2917857], [-118.3264587, 34.2917591], [-118.3264661, 34.2917281], [-118.3264808, 34.2917026], [-118.326515, 34.2916793], [-118.3265834, 34.2916406], [-118.3266096, 34.2916134], [-118.3266377, 34.2915713], [-118.3266438, 34.2915259], [-118.3266317, 34.2914838], [-118.3266284, 34.2914461], [-118.3266331, 34.2914289], [-118.3266498, 34.2914184], [-118.3266713, 34.2914179], [-118.3266907, 34.2914284], [-118.3267048, 34.2914334], [-118.3267209, 34.2914339], [-118.3267397, 34.2914273], [-118.3268289, 34.2913697], [-118.3268644, 34.2913276], [-118.3268972, 34.2912882], [-118.3268946, 34.2912395], [-118.3268845, 34.2912018], [-118.3268631, 34.2911702], [-118.3268396, 34.2911248], [-118.3268242, 34.291091], [-118.3268148, 34.2910622], [-118.3268181, 34.2910345], [-118.3268436, 34.2909902], [-118.3268771, 34.2909087], [-118.3269033, 34.2908334], [-118.3269214, 34.2907708], [-118.3269348, 34.2907182], [-118.326961, 34.2906816], [-118.3269831, 34.2906605], [-118.32702, 34.29064], [-118.3270624, 34.2906212]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

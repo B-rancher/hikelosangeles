@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manzanita Mountain Trail — Hike Los Angeles</title>
+<meta name="description" content="Manzanita Mountain Trail is a 0.56-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Manzanita Mountain Trail</div>
+  <h1 class="page-title">Manzanita Mountain Trail</h1>
+  <p class="page-subtitle">Manzanita Mountain Trail is a 0.56-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>0.56 mi (2 mapped segments)</td></tr>
+            <tr><th>Surface</th><td>dirt</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Manzanita Mountain Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.4686539, 34.3717105], [-118.4686081, 34.3716976], [-118.4685358, 34.371678], [-118.468527, 34.3715804], [-118.4684569, 34.3715443], [-118.4683911, 34.371607], [-118.4683014, 34.371684], [-118.468244, 34.3717384], [-118.4681715, 34.3717764], [-118.468111, 34.371808], [-118.4680371, 34.3718646], [-118.4679539, 34.3718754], [-118.4679188, 34.3719195], [-118.4679069, 34.3720127], [-118.4678878, 34.3720359], [-118.4677969, 34.3721562], [-118.4677869, 34.3722619], [-118.4677959, 34.3723704], [-118.4678779, 34.3725286], [-118.4679131, 34.3726519], [-118.4679287, 34.3727167], [-118.467926, 34.3727551], [-118.467943, 34.3728771], [-118.4679256, 34.372905], [-118.4678548, 34.3729995], [-118.4678152, 34.373064], [-118.4677726, 34.3731295], [-118.4677233, 34.3731884], [-118.4676788, 34.3732324], [-118.4675678, 34.3732801], [-118.4675545, 34.3733553], [-118.4675818, 34.3734315], [-118.4676181, 34.3735339], [-118.4676231, 34.373574], [-118.4676234, 34.3735796], [-118.4675992, 34.3736162], [-118.467543, 34.3735589], [-118.4674985, 34.3735155], [-118.46745, 34.3734832], [-118.4673193, 34.3734148], [-118.4672571, 34.3733661], [-118.4672477, 34.3733573], [-118.4672441, 34.3733206], [-118.4672464, 34.3732662], [-118.467252, 34.3731809], [-118.4672454, 34.3731182], [-118.4671742, 34.3730977], [-118.4671473, 34.3731507], [-118.4670804, 34.3732223], [-118.4669918, 34.3732839], [-118.46695, 34.373357], [-118.4669325, 34.373444], [-118.4669276, 34.3735538], [-118.466992, 34.3736334], [-118.4670351, 34.3736562], [-118.4670418, 34.3737217], [-118.4670691, 34.3737754], [-118.4670793, 34.3737802], [-118.4671428, 34.3738113], [-118.4671311, 34.3739108], [-118.467178, 34.3740133], [-118.4672594, 34.3740653], [-118.4672276, 34.3740969], [-118.4671842, 34.3741697], [-118.4671605, 34.3742528], [-118.4671864, 34.3743298], [-118.4672068, 34.3743875], [-118.4672661, 34.3744639], [-118.4672542, 34.3745655], [-118.4672879, 34.3746109], [-118.4672959, 34.3746556], [-118.4672415, 34.3746961], [-118.4672183, 34.3746994], [-118.4671797, 34.3746922], [-118.4671427, 34.3746799], [-118.4670845, 34.3746396], [-118.4670706, 34.3746322], [-118.4670593, 34.374633], [-118.4670551, 34.3746401], [-118.467054, 34.3746511], [-118.4670528, 34.3746939], [-118.4670489, 34.3747228], [-118.4670499, 34.374738], [-118.4670548, 34.3747532], [-118.4670785, 34.3747802], [-118.4671023, 34.3748009], [-118.4671557, 34.3748318], [-118.4672068, 34.3748492], [-118.4672565, 34.3748447], [-118.4672969, 34.3748228], [-118.4673931, 34.3748019], [-118.4674427, 34.3747998], [-118.4674729, 34.3748086], [-118.4674843, 34.374832], [-118.4674755, 34.3748777], [-118.4674773, 34.3748903], [-118.4674869, 34.3749115], [-118.4674997, 34.374929], [-118.4675034, 34.3749366], [-118.4675044, 34.3749443], [-118.4675012, 34.3749647], [-118.4674977, 34.3749753], [-118.467492, 34.3749829], [-118.4674729, 34.3749953], [-118.4674469, 34.3750248], [-118.4674288, 34.3750499], [-118.4674183, 34.3750855], [-118.4674118, 34.3751037], [-118.467404, 34.375187], [-118.467406, 34.3752012], [-118.4674098, 34.3752166], [-118.4674181, 34.3752381], [-118.4674223, 34.375245], [-118.4674329, 34.3752518], [-118.467439, 34.3752593], [-118.4674419, 34.3752713], [-118.4674448, 34.3753004], [-118.4674454, 34.375319], [-118.4674482, 34.3753321], [-118.4674565, 34.3753408], [-118.4674687, 34.3753481], [-118.4674762, 34.3753567], [-118.4674761, 34.3753642], [-118.4674687, 34.375377], [-118.4674669, 34.3753841], [-118.4674713, 34.3753932], [-118.4674775, 34.3754017], [-118.4674888, 34.3754172], [-118.4674935, 34.3754276], [-118.4674956, 34.3754395], [-118.4674954, 34.3754632], [-118.4675039, 34.3755036], [-118.4675109, 34.3755393], [-118.4675121, 34.3755726], [-118.4675177, 34.3756126], [-118.4675193, 34.3756564], [-118.4675209, 34.3756779], [-118.4675259, 34.3757028], [-118.4675279, 34.3757382], [-118.4675268, 34.3757695], [-118.4675276, 34.3757777], [-118.4675316, 34.375786], [-118.4675373, 34.3757938], [-118.4675418, 34.3758026], [-118.4675425, 34.3758134], [-118.4675369, 34.3758486], [-118.467534, 34.375861], [-118.4675306, 34.3758704], [-118.4675091, 34.3758884], [-118.4674794, 34.3759236], [-118.4674548, 34.3759387], [-118.4674445, 34.375952], [-118.467443, 34.3759677], [-118.4674482, 34.3759818], [-118.4674632, 34.3759936], [-118.4674726, 34.375998], [-118.4674834, 34.3760029], [-118.4675112, 34.3760093], [-118.4675401, 34.3760115], [-118.4675655, 34.3760065], [-118.467579, 34.3760014], [-118.4676057, 34.3759871], [-118.4676324, 34.3759777], [-118.4676533, 34.3759752], [-118.4676743, 34.3759762], [-118.4676935, 34.3759811], [-118.4677088, 34.375991], [-118.4677194, 34.3760018], [-118.4677209, 34.3760196], [-118.4677145, 34.3760389], [-118.4677026, 34.3760556], [-118.467693, 34.3760669]], [[-118.467943, 34.3728771], [-118.4679845, 34.3728886], [-118.4679873, 34.3729746], [-118.4680081, 34.3730725], [-118.4681236, 34.3731929], [-118.4681118, 34.3732306], [-118.4682685, 34.3732936], [-118.4683032, 34.3733237]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

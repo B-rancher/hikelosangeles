@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upper Winter Trail — Hike Los Angeles</title>
+<meta name="description" content="Upper Winter Trail is a 0.94-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Upper Winter Trail</div>
+  <h1 class="page-title">Upper Winter Trail</h1>
+  <p class="page-subtitle">Upper Winter Trail is a 0.94-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>0.94 mi (1 mapped segment)</td></tr>
+            <tr><th>Surface</th><td>dirt</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Upper Winter Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.0214584, 34.1967499], [-118.0215552, 34.1966401], [-118.0216117, 34.1965028], [-118.0216432, 34.1963917], [-118.0216482, 34.1963103], [-118.0216942, 34.1961587], [-118.0216768, 34.1961224], [-118.0216964, 34.1959965], [-118.0217248, 34.1959719], [-118.0217316, 34.1959318], [-118.0217137, 34.1958991], [-118.0216159, 34.1957487], [-118.0215694, 34.1956433], [-118.0215496, 34.1955252], [-118.0215291, 34.1955107], [-118.0215001, 34.1955171], [-118.0214903, 34.1956268], [-118.0215171, 34.1957859], [-118.0215332, 34.1958248], [-118.0215535, 34.1958742], [-118.021509, 34.196047], [-118.0215081, 34.1961334], [-118.0214663, 34.1962041], [-118.0213939, 34.1963612], [-118.0213097, 34.1964377], [-118.0212834, 34.1964924], [-118.0212645, 34.196554], [-118.0212441, 34.196578], [-118.0211422, 34.1966024], [-118.0210403, 34.1966623], [-118.0209732, 34.1967178], [-118.0209169, 34.1967954], [-118.0208337, 34.1968575], [-118.0207291, 34.1968731], [-118.0207023, 34.196913], [-118.0207184, 34.1969574], [-118.0207747, 34.1970439], [-118.0209291, 34.1972784], [-118.0210861, 34.1974528], [-118.0211234, 34.1975408], [-118.0211717, 34.1975652], [-118.0212012, 34.197603], [-118.0212951, 34.1976806], [-118.0214345, 34.1977649], [-118.0215097, 34.1977427], [-118.0216303, 34.1977494], [-118.0215472, 34.197796], [-118.0214533, 34.1978425], [-118.021389, 34.1978425], [-118.0213219, 34.1977827], [-118.0211636, 34.1977183], [-118.0209571, 34.1976651], [-118.0209357, 34.1975342], [-118.0208525, 34.1974876], [-118.0207774, 34.1973855], [-118.0206755, 34.1973323], [-118.0205709, 34.1972369], [-118.0205146, 34.1971437], [-118.0202249, 34.1970585], [-118.0201264, 34.1969999], [-118.0200991, 34.1968993], [-118.0201174, 34.1968505], [-118.0202266, 34.196802], [-118.0203204, 34.1966583], [-118.0205232, 34.1964758], [-118.0206135, 34.1963786], [-118.0206009, 34.1963411], [-118.0205561, 34.1963546], [-118.0204437, 34.1964377], [-118.0202892, 34.1965714], [-118.0201873, 34.1966268], [-118.0201042, 34.1966579], [-118.0200183, 34.1966579], [-118.0198306, 34.1966579], [-118.0197743, 34.1966645], [-118.0197367, 34.1967422], [-118.0196911, 34.1968132], [-118.0197264, 34.1970378], [-118.0196632, 34.1970798], [-118.0195945, 34.1970741], [-118.0195414, 34.1970263], [-118.0194787, 34.1967771], [-118.0193709, 34.1966276], [-118.0192413, 34.1965966], [-118.0190717, 34.1966503], [-118.0189858, 34.1968665], [-118.0189926, 34.1970941], [-118.0190889, 34.1972221], [-118.0192402, 34.1973785], [-118.0193297, 34.1975264], [-118.019395, 34.1977568], [-118.0195463, 34.1978563], [-118.0196323, 34.1979701], [-118.0196735, 34.1981322], [-118.0197991, 34.1983557], [-118.0198431, 34.1984577], [-118.0198111, 34.1985845], [-118.0196247, 34.1986849], [-118.0195185, 34.1988305], [-118.0191473, 34.1991394], [-118.0190162, 34.1991395], [-118.0189252, 34.1992003], [-118.0188673, 34.1993304], [-118.0188556, 34.1994265], [-118.0188936, 34.1995502], [-118.0190266, 34.1997019], [-118.0190431, 34.1997797], [-118.0191104, 34.1997922], [-118.0191577, 34.1999099], [-118.0192065, 34.2000884], [-118.0192557, 34.2002015], [-118.0193461, 34.200248], [-118.0194328, 34.2002711], [-118.0196385, 34.2003045], [-118.019696, 34.2003334], [-118.0198125, 34.2004358]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

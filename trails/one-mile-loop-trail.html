@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One-mile Loop Trail — Hike Los Angeles</title>
+<meta name="description" content="One-mile Loop Trail is a 0.98-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; One-mile Loop Trail</div>
+  <h1 class="page-title">One-mile Loop Trail</h1>
+  <p class="page-subtitle">One-mile Loop Trail is a 0.98-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>0.98 mi (1 mapped segment)</td></tr>
+            <tr><th>Surface</th><td>Not specified</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for One-mile Loop Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-117.857959, 34.41401], [-117.8577481, 34.4140495], [-117.8576378, 34.4141781], [-117.8575917, 34.4142006], [-117.8575224, 34.4142941], [-117.8574409, 34.4142979], [-117.8573104, 34.4142619], [-117.8571301, 34.4143044], [-117.8570185, 34.4143185], [-117.8567476, 34.4143414], [-117.8566066, 34.4144601], [-117.8565688, 34.4146351], [-117.8564803, 34.4147892], [-117.8564501, 34.4148756], [-117.856384, 34.414897], [-117.8562804, 34.4147151], [-117.8562032, 34.4144956], [-117.8562463, 34.4142106], [-117.8562343, 34.4140723], [-117.8561431, 34.4139999], [-117.8560744, 34.4139503], [-117.856105, 34.4137885], [-117.8561254, 34.413691], [-117.8560485, 34.4137185], [-117.8558897, 34.414049], [-117.8558512, 34.4140707], [-117.8557997, 34.4140424], [-117.8557139, 34.4139008], [-117.8555795, 34.4137534], [-117.8554789, 34.4136332], [-117.8551646, 34.4137591], [-117.8551131, 34.4137167], [-117.8548903, 34.4137284], [-117.8548372, 34.413773], [-117.8548299, 34.413837], [-117.8549844, 34.414007], [-117.85495, 34.4140919], [-117.8548985, 34.4141698], [-117.8548657, 34.4142509], [-117.8546839, 34.414276], [-117.8546067, 34.4143115], [-117.8545466, 34.4143185], [-117.854435, 34.414184], [-117.854169, 34.4142902], [-117.8541015, 34.4143019], [-117.8540771, 34.414227], [-117.8541321, 34.4140228], [-117.8541359, 34.4138829], [-117.8541175, 34.4136175], [-117.854229, 34.4136388], [-117.8546325, 34.4133697], [-117.8548213, 34.4133626], [-117.8550015, 34.4133414], [-117.8550101, 34.4132706], [-117.8550396, 34.4131808], [-117.8551217, 34.4131431], [-117.8553213, 34.4129088], [-117.8553401, 34.4128126], [-117.8554308, 34.4128168], [-117.855671, 34.4129165], [-117.8557955, 34.4129894], [-117.85598, 34.4130086], [-117.8561602, 34.4130157], [-117.8562804, 34.4130015], [-117.8563344, 34.4129029], [-117.8564934, 34.4128474], [-117.8565722, 34.4127466], [-117.8566151, 34.4125554], [-117.8566924, 34.4126545], [-117.8568126, 34.4126474], [-117.856864, 34.4125412], [-117.8570529, 34.4125129], [-117.8571902, 34.4124067], [-117.8571899, 34.4125074], [-117.8571301, 34.4125837], [-117.8571301, 34.4126333], [-117.8576365, 34.4123784], [-117.857688, 34.4124492], [-117.8577739, 34.4124775], [-117.8579112, 34.4124633], [-117.8580485, 34.4123996], [-117.8581858, 34.4123996], [-117.8583575, 34.4123642], [-117.8585807, 34.4121943], [-117.8587266, 34.4121801], [-117.858821, 34.4120597], [-117.8588897, 34.411996], [-117.8589841, 34.4118473], [-117.8591557, 34.4115853], [-117.8592069, 34.4115003], [-117.8592759, 34.4114862], [-117.8592416, 34.4117057], [-117.8592264, 34.4118976], [-117.8591764, 34.4120444], [-117.8591466, 34.4122296], [-117.8590956, 34.4123005], [-117.8590465, 34.4124133], [-117.8589647, 34.4125099], [-117.8588585, 34.4126008], [-117.8587695, 34.4126758], [-117.8587266, 34.4127253], [-117.858788, 34.4128063]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

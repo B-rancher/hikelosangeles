@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unknown — Hike Los Angeles</title>
+<meta name="description" content="Unknown is a 1.49-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style.css">
+<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+          <a href="../camps.html">View All Camps &rarr;</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Unknown</div>
+  <h1 class="page-title">Unknown</h1>
+  <p class="page-subtitle">Unknown is a 1.49-mile hiking trail in the Angeles National Forest.</p>
+  <div class="two-col">
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trail Details</div>
+        <div class="panel-body" style="overflow-x:auto;">
+          <table class="report-table">
+            <tr><th>Length</th><td>1.49 mi (1 mapped segment)</td></tr>
+            <tr><th>Surface</th><td>ground</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Map</div>
+        <div class="panel-body"><div id="map"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-head">Trip Reports</div>
+        <div class="panel-body">
+          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Unknown yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">Source</div>
+        <div class="panel-body">
+          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.4126113, 34.5450062], [-118.4126295, 34.5450624], [-118.412565, 34.5451763], [-118.4123948, 34.5452572], [-118.4122864, 34.5453491], [-118.4122833, 34.5454471], [-118.4123403, 34.5455122], [-118.4124831, 34.5455283], [-118.4125791, 34.5455164], [-118.4127067, 34.5455684], [-118.4128704, 34.5456047], [-118.4131652, 34.5456542], [-118.4132935, 34.5456581], [-118.4134123, 34.5456802], [-118.4135216, 34.5457531], [-118.4136731, 34.5458467], [-118.4137495, 34.5458988], [-118.413861, 34.5459385], [-118.4140043, 34.5459659], [-118.4141371, 34.5460094], [-118.4142956, 34.5460411], [-118.4144045, 34.5460506], [-118.414523, 34.5461361], [-118.4147214, 34.5461862], [-118.4148947, 34.5462251], [-118.4150746, 34.5462719], [-118.4151877, 34.5462867], [-118.4152978, 34.5463177], [-118.4154532, 34.5463233], [-118.4155816, 34.5463117], [-118.4157224, 34.5462947], [-118.4158551, 34.5462745], [-118.4160103, 34.5462826], [-118.4161443, 34.5462646], [-118.4162333, 34.5462404], [-118.4163371, 34.5462438], [-118.4164437, 34.5463102], [-118.4165002, 34.5464114], [-118.4165324, 34.5465164], [-118.4165891, 34.5466474], [-118.4166049, 34.5467288], [-118.4165808, 34.5468253], [-118.4165607, 34.547012], [-118.4165637, 34.5471235], [-118.4165322, 34.547214], [-118.4164615, 34.5472862], [-118.4163515, 34.5473256], [-118.4162222, 34.5473622], [-118.4160712, 34.5473635], [-118.4158777, 34.5473506], [-118.4156683, 34.5473192], [-118.4155668, 34.5473138], [-118.4154811, 34.5473211], [-118.4153784, 34.5472929], [-118.4152098, 34.5473027], [-118.4150315, 34.5473294], [-118.4149092, 34.5473653], [-118.4147857, 34.547409], [-118.4146532, 34.54745], [-118.4145467, 34.5474662], [-118.414521, 34.5474938], [-118.4145588, 34.5475419], [-118.414677, 34.5475598], [-118.4147564, 34.5475861], [-118.414905, 34.547604], [-118.4150559, 34.5476619], [-118.4152184, 34.5476837], [-118.4153092, 34.5477129], [-118.415374, 34.5477601], [-118.4154725, 34.5477848], [-118.4157405, 34.5479209], [-118.415946, 34.5480075], [-118.4161408, 34.5480704], [-118.4163314, 34.5480845], [-118.4164069, 34.5481124], [-118.4164682, 34.5481681], [-118.4165133, 34.5482174], [-118.4165912, 34.5482528], [-118.416699, 34.5482554], [-118.4168011, 34.5482863], [-118.4169156, 34.548366], [-118.4169148, 34.5484399], [-118.4168427, 34.5484935], [-118.4165585, 34.5487384], [-118.4164224, 34.5488536], [-118.4163064, 34.5489558], [-118.4161545, 34.5490552], [-118.4160874, 34.5490898], [-118.4160803, 34.5491104], [-118.4161235, 34.5491509], [-118.4162513, 34.5492016], [-118.4163791, 34.5492708], [-118.4164455, 34.5493385], [-118.4164324, 34.5494205], [-118.4163594, 34.5495136], [-118.4162478, 34.5495395], [-118.4160453, 34.5494878], [-118.4159359, 34.5494578], [-118.4158001, 34.5494608], [-118.4156722, 34.5494435], [-118.4155787, 34.5494417], [-118.4155411, 34.5494991], [-118.4155471, 34.5496217], [-118.4154698, 34.5497959], [-118.4154591, 34.549932], [-118.415421, 34.5500515], [-118.4153487, 34.5500936], [-118.4152408, 34.5500914], [-118.4151463, 34.5501661], [-118.4150635, 34.5502275], [-118.4149256, 34.5503952], [-118.4148125, 34.5505703], [-118.4147276, 34.5506729], [-118.4145865, 34.5508692], [-118.414469, 34.551045], [-118.4143089, 34.5512566], [-118.4142412, 34.5513926], [-118.4141717, 34.5514612], [-118.4141706, 34.5515027], [-118.4142307, 34.5516128], [-118.4143198, 34.5516647], [-118.4144299, 34.5517238], [-118.4145476, 34.5517392], [-118.4147418, 34.5516907], [-118.414861, 34.5516426], [-118.4149567, 34.5516159], [-118.41512, 34.5515234], [-118.4152108, 34.5514935], [-118.4153249, 34.5514792], [-118.4155212, 34.5514431], [-118.4156212, 34.5514747], [-118.4157685, 34.5514919], [-118.4160117, 34.551471], [-118.4162057, 34.551475], [-118.4164185, 34.5514647], [-118.4165688, 34.5514303], [-118.4167381, 34.5514425], [-118.4169177, 34.5514493], [-118.4170886, 34.5515052], [-118.4172603, 34.5515688], [-118.4174687, 34.5516245], [-118.4176038, 34.551666], [-118.417757, 34.5516691], [-118.4178156, 34.5516931], [-118.4178196, 34.5518191], [-118.4178504, 34.5519393], [-118.4178406, 34.5519904], [-118.4178186, 34.5520676], [-118.4177578, 34.5521502], [-118.4176731, 34.552231], [-118.4175709, 34.552386], [-118.4175172, 34.552458], [-118.4174571, 34.5525162], [-118.4173319, 34.5525419], [-118.4171896, 34.5525893], [-118.4171132, 34.5526863], [-118.4170551, 34.5527905], [-118.4169378, 34.5528557], [-118.4167368, 34.5529537], [-118.4166609, 34.5530059], [-118.4164925, 34.5530952], [-118.4163316, 34.5531935], [-118.4162393, 34.5532367], [-118.4161011, 34.5532804], [-118.4160176, 34.5532853], [-118.415914, 34.553305], [-118.4157996, 34.553328], [-118.4157027, 34.5533188], [-118.4156186, 34.5532767], [-118.4155866, 34.5532417], [-118.4155187, 34.5532273], [-118.415436, 34.5532585], [-118.4153487, 34.5533202], [-118.4151479, 34.5533486], [-118.4149079, 34.5533688], [-118.4147403, 34.5533743], [-118.4146062, 34.5534226], [-118.414497, 34.5534545], [-118.4143996, 34.5534807], [-118.4143689, 34.5535408], [-118.4143727, 34.5535958], [-118.4144327, 34.5536053], [-118.4145518, 34.553572], [-118.4146484, 34.553573], [-118.4146831, 34.5536251], [-118.4146803, 34.5537011], [-118.4146357, 34.5537461], [-118.4145056, 34.5537803]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

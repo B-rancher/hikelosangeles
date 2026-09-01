@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Indian Trail — Hike Los Angeles</title>
-<meta name="description" content="Indian Trail is a U.S. Forest Service trail in the Angeles National Forest, 0.07 miles long (Trail Class 4).">
+<meta name="description" content="Indian Trail is a 0.07-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <link rel="stylesheet" href="../style.css">
@@ -56,23 +56,15 @@
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Indian Trail</div>
   <h1 class="page-title">Indian Trail</h1>
-  <p class="page-subtitle">Indian Trail is a U.S. Forest Service trail in the Angeles National Forest, 0.07 miles long (Trail Class 4).</p>
+  <p class="page-subtitle">Indian Trail is a 0.07-mile hiking trail in the Angeles National Forest.</p>
   <div class="two-col">
     <div>
       <div class="panel">
         <div class="panel-head">Trail Details</div>
         <div class="panel-body" style="overflow-x:auto;">
           <table class="report-table">
-            <tr><th>Trail Number</th><td>11W18</td></tr>
             <tr><th>Length</th><td>0.07 mi (1 mapped segment)</td></tr>
-            <tr><th>USFS Trail Class</th><td>4</td></tr>
-            <tr><th>Surface</th><td>ASPHALT</td></tr>
-            <tr><th>Typical Grade</th><td>10-12%</td></tr>
-            <tr><th>Typical Tread Width</th><td>TW03 - 18-24 INCHES</td></tr>
-            <tr><th>Hiking / Pedestrian</th><td>Yes</td></tr>
-            <tr><th>Equestrian / Pack Saddle</th><td>Not specified</td></tr>
-            <tr><th>Mountain Biking</th><td>Not specified</td></tr>
-            <tr><th>Motorized Use</th><td>No</td></tr>
+            <tr><th>Surface</th><td>ASPHALT</td></tr><tr><th>USFS Trail Number</th><td>11W18</td></tr><tr><th>USFS Trail Class</th><td>4</td></tr>
           </table>
         </div>
       </div>
@@ -91,7 +83,7 @@
       <div class="panel">
         <div class="panel-head">Source</div>
         <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">Trail geometry and attributes from the U.S. Forest Service National Trail System (INFRA/EDW), Angeles National Forest.</p>
+          <p style="font-size:12px;color:#5C5842;">U.S. Forest Service trail data (not currently mapped in OpenStreetMap).</p>
         </div>
       </div>
     </div>
@@ -130,7 +122,7 @@
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);
-    L.polyline(latlngs, { color:'#A8503B', weight:4 }).addTo(group);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
   });
   group.addTo(map);
   map.fitBounds(group.getBounds(), { padding:[20,20] });
