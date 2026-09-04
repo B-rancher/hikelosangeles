@@ -123,7 +123,7 @@ const TABLE_DATA = [{"name": "Acorn", "slug": "trails/acorn.html", "miles": 1.82
 let map;
 function initMap(){
   map = L.map('map', { scrollWheelZoom:false }).setView([34.28,-118.05],10);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { attribution:'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ', maxZoom:16 }).addTo(map);
 
   function loadLineLayer(url, color, popupFn, opts){
     opts = opts || {};

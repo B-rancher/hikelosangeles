@@ -142,7 +142,7 @@
 <script>
   const segments = [[[-118.005941, 34.326684], [-118.00597, 34.326638], [-118.006042, 34.326504], [-118.006077, 34.32649], [-118.006113, 34.326491], [-118.00616336399997, 34.32654476400006], [-118.00617630399995, 34.32661695400003], [-118.00617499899994, 34.32671], [-118.006173, 34.326786], [-118.006159444, 34.326794611000025], [-118.00614385499995, 34.32678972800005], [-118.006142, 34.326777], [-118.00612817299998, 34.326704677000066], [-118.00612279999996, 34.32668825800005], [-118.006103, 34.326673], [-118.00607174699996, 34.32667579300005], [-118.00605371499995, 34.326683099000036], [-118.006034, 34.326685], [-118.00601740399998, 34.32667695500004], [-118.006016, 34.326651], [-118.00604207999999, 34.326509635000036]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { attribution:'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ', maxZoom:16 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);
