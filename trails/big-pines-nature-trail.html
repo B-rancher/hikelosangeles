@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Pines Nature Trail — Hike Los Angeles</title>
+<meta name="description" content="Big Pines Nature Trail is a 0.43-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Big Pines Nature Trail</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Big Pines Nature Trail — Angeles National Forest <small>Trail Distance 0.43 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Big Pines Nature Trail is a 0.43-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.43 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Big Pines Nature Trail</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-117.68940561, 34.37900467000003], [-117.68932946799998, 34.37906653600004], [-117.68922952999998, 34.379090330000054], [-117.68912483399998, 34.379104607000045], [-117.68908200499999, 34.37915695500004], [-117.68914862899999, 34.37922358000003], [-117.68917242299995, 34.37927592800003], [-117.68914862899999, 34.379323517000046], [-117.68909152199996, 34.37934255300007], [-117.68907248599999, 34.37939966000005], [-117.68906296899996, 34.379480562000026], [-117.68897730799995, 34.37949959800005], [-117.68888212899998, 34.37951863300003], [-117.68882026299997, 34.37955194500006], [-117.68875839699996, 34.37963284700004], [-117.68867749499998, 34.37963760700006], [-117.68851569299994, 34.379637606000074], [-117.68837768399999, 34.37966140100008], [-117.68829202299997, 34.37967567800007], [-117.68835388899998, 34.379713749000075], [-117.68843479099996, 34.37976609700007], [-117.68840623699998, 34.379794651000054], [-117.68830629999997, 34.37979941000003], [-117.68823015699996, 34.37978513300004], [-117.68819208499997, 34.37976133800004], [-117.68813973799996, 34.37970899000004], [-117.68805407699995, 34.37969471400004], [-117.68793986299994, 34.379728026000066], [-117.68781137199994, 34.37974230300006], [-117.68775902399994, 34.379813686000034], [-117.68772571199997, 34.37990886500006], [-117.68769239899996, 34.37998976600005], [-117.68764480999994, 34.380032597000024], [-117.68758770299996, 34.38004211500004], [-117.68751155999996, 34.38000404400003], [-117.68742589899995, 34.38000404300004], [-117.68731168499994, 34.37998024900003], [-117.68724030199996, 34.37992314100006], [-117.687197471, 34.37987555300003], [-117.68717843599995, 34.37981368700002], [-117.68722602399998, 34.37978037400006], [-117.68731168499994, 34.37978037400006], [-117.68737355099995, 34.37976609700007], [-117.68743065899997, 34.37970423100006], [-117.687478248, 34.37964236600004], [-117.68754011399994, 34.37956146400006], [-117.68756390799996, 34.37951863400008], [-117.68759246099995, 34.37952339200007], [-117.68767336299999, 34.379575740000064], [-117.68773046999996, 34.379542428000036], [-117.68785896099996, 34.37953291000008], [-117.68794938099995, 34.37951863400008], [-117.68796365799994, 34.37948532100006], [-117.68798269299998, 34.37943773100005], [-117.68800648799998, 34.379385384000045], [-117.687968416, 34.379314], [-117.68800172899995, 34.37928068700006], [-117.688054078, 34.379309241000044], [-117.688120702, 34.379328276000024], [-117.68821112099994, 34.37934255300007], [-117.68831581799998, 34.37933303500006], [-117.68832533499994, 34.37927592900007], [-117.68829202299997, 34.379228339000065], [-117.68826346999998, 34.37919502700004], [-117.68829678199995, 34.379152196000064], [-117.68829678199995, 34.379085571000076], [-117.68823967499998, 34.37901894700008], [-117.68813497899998, 34.37891900900007], [-117.68801124699996, 34.37885238400003], [-117.68787799699999, 34.37878575900004], [-117.68786371999994, 34.37875244700007], [-117.68800648699994, 34.37879051800007], [-117.68815877299994, 34.37882859000007], [-117.68831105899994, 34.37879051800007], [-117.68840623699998, 34.37876672300007], [-117.68854900499997, 34.378819072000056], [-117.68881550499998, 34.378899974000035], [-117.68899158399995, 34.37893804500004], [-117.68916290599998, 34.37896659900008], [-117.68928187899996, 34.37899039300004], [-117.68937229899996, 34.379009429000064]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

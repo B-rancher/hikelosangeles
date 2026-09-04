@@ -7,16 +7,15 @@
 <meta name="description" content="Sunset Ridge Lower is a 0.68-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="../style.css">
-<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+<link rel="stylesheet" href="../style-v2.css">
 </head>
 <body>
 
-<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
-      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
       <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
     </a>
     <form class="header-search" onsubmit="return false;">
@@ -31,7 +30,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../trails.html">Trails</a>
         <div class="dropdown">
-          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <strong>By Mountain Range</strong>
           <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
@@ -44,7 +43,6 @@
         <div class="dropdown">
           <a href="../camps.html?type=trail">Trail Camps</a>
           <a href="../camps.html?type=car">Car Camps</a>
-          <a href="../camps.html">View All Camps &rarr;</a>
         </div>
       </li>
       <li><a href="#">Conditions</a></li>
@@ -55,35 +53,61 @@
 
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Sunset Ridge Lower</div>
-  <h1 class="page-title">Sunset Ridge Lower</h1>
-  <p class="page-subtitle">Sunset Ridge Lower is a 0.68-mile hiking trail in the Angeles National Forest.</p>
+
   <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-head">Trail Details</div>
-        <div class="panel-body" style="overflow-x:auto;">
-          <table class="report-table">
-            <tr><th>Length</th><td>0.68 mi (1 mapped segment)</td></tr>
-            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr><tr><th>USFS Trail Number</th><td>12W18.1</td></tr><tr><th>USFS Trail Class</th><td>2</td></tr>
-          </table>
-        </div>
+    <div id="content-left">
+      <h1 class="trail-title">Sunset Ridge Lower — Angeles National Forest <small>Trail Distance 0.68 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Sunset Ridge Lower is a 0.68-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>12W18.1</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.68 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
       </div>
-      <div class="panel">
-        <div class="panel-head">Map</div>
-        <div class="panel-body"><div id="map"></div></div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Sunset Ridge Lower</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
       </div>
     </div>
+
     <div>
-      <div class="panel">
-        <div class="panel-head">Trip Reports</div>
-        <div class="panel-body">
-          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Sunset Ridge Lower yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel-head">Source</div>
-        <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">U.S. Forest Service trail data (not currently mapped in OpenStreetMap).</p>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
         </div>
       </div>
     </div>
@@ -109,7 +133,7 @@
       <li><a href="#">Contact / Support</a></li>
     </ul></div>
     <div><h4>Why Hike Los Angeles</h4><ul>
-      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
     </ul></div>
   </div>
   <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
@@ -118,7 +142,7 @@
 <script>
   const segments = [[[-118.14525237199996, 34.217429812000034], [-118.145163648, 34.217407095000056], [-118.14500907899998, 34.21737618100008], [-118.14491118499996, 34.21735557200003], [-118.14485966199999, 34.21734526700004], [-118.14483389999998, 34.21732465800005], [-118.14484420499997, 34.217278287000056], [-118.14491118499996, 34.21715978300006], [-118.14498331699997, 34.21697945300008], [-118.14500392699995, 34.21686610100005], [-118.14501938299998, 34.21677336000005], [-118.14500392599996, 34.216701227000044], [-118.14498846999999, 34.21662394300006], [-118.14497816499994, 34.21655696200003], [-118.144952403, 34.21651059100003], [-118.14488542299995, 34.21647967700005], [-118.14480813899996, 34.21646937300005], [-118.14473085299994, 34.21645906800006], [-118.14469993899996, 34.216438459000074], [-118.14468963499996, 34.21635602200007], [-118.14466902599997, 34.21624267100003], [-118.14463295899998, 34.216206605000025], [-118.14458143699994, 34.216185995000046], [-118.14454021799997, 34.21613447200008], [-118.14454021799997, 34.216077797000025], [-118.14450930399994, 34.21602112100004], [-118.14445778099997, 34.21599535900003], [-118.14444232299996, 34.21592838000004], [-118.14444232399995, 34.215820181000026], [-118.14440110499999, 34.215784115000076], [-118.144298059, 34.21574804900007], [-118.14420016499997, 34.21570167700003], [-118.14416409899997, 34.21566561100008], [-118.144179555, 34.215619240000024], [-118.14423623099998, 34.215608936000024], [-118.14433927699997, 34.21560378300006], [-118.14444747599998, 34.215572870000074], [-118.14458143599995, 34.215578021000056], [-118.14468963499996, 34.21559347800007], [-118.14476691999994, 34.21560378300006], [-118.14486481299997, 34.21565530700008], [-118.14489057499998, 34.215706830000045], [-118.14489057499998, 34.21574289600005], [-118.14491118499996, 34.21576865800006], [-118.14501423099995, 34.21580987600004], [-118.14510697199995, 34.215825333000055], [-118.14519971399994, 34.215830485000026], [-118.14528730399996, 34.21577896200006], [-118.14547278699996, 34.215608935000034], [-118.14570464199994, 34.21549558500004], [-118.14581284099995, 34.215469823000035], [-118.14588497299997, 34.215438909000056], [-118.14597771399997, 34.21540799500008], [-118.14604469499994, 34.21542345200004], [-118.14617865499997, 34.215459519000035], [-118.146286853, 34.215454366000074], [-118.14655477399998, 34.21540284300005], [-118.14674025699998, 34.21536677700004], [-118.14688967499995, 34.21537192900007], [-118.14699272099995, 34.21537192900007], [-118.14708030999998, 34.21541830000007], [-118.14715244299998, 34.215454366000074], [-118.14721942299997, 34.215444062000074], [-118.14729155599997, 34.21541314700005], [-118.14734307899994, 34.21535647200005], [-118.14740490699995, 34.21531525300003], [-118.147518258, 34.21529979600007], [-118.14764191299997, 34.21529979600007], [-118.14770374099999, 34.21529464500003], [-118.14774495999995, 34.21526888200003], [-118.14783770199995, 34.21526373000006], [-118.14803348999999, 34.21527403500005], [-118.14821381999997, 34.21528433900005], [-118.14826534399998, 34.21528433900005], [-118.14821382099996, 34.21524827300004], [-118.14806955599994, 34.215207054000075], [-118.147976815, 34.21517098900006], [-118.14790468199999, 34.21512461700007], [-118.14779648299998, 34.21510916100004], [-118.14763160899997, 34.215088551000065], [-118.14746158199995, 34.21504733300003], [-118.14708031099997, 34.21499581000006], [-118.146735106, 34.214970048000055], [-118.146606298, 34.214959743000065], [-118.146544469, 34.21491852500003], [-118.14638474799995, 34.21487730600006], [-118.146266245, 34.21487730700005], [-118.14611682699996, 34.21488245900008], [-118.14597256299999, 34.21486700100007], [-118.14583860199997, 34.21490306800007], [-118.14569433699995, 34.21499581000006], [-118.14549339599995, 34.215057638000076], [-118.14533367499996, 34.21507309500004], [-118.14514819199997, 34.21506279000005], [-118.14505029699995, 34.21504733300003], [-118.14499362099997, 34.21500611400006], [-118.144942099, 34.21492367700006], [-118.144942099, 34.214851544000055], [-118.14497301299997, 34.21483608800003], [-118.14504514499998, 34.21488761100005], [-118.145163648, 34.21491852500003], [-118.14530276099998, 34.21492367800005], [-118.14539550199999, 34.21489791600004], [-118.145550072, 34.214830936000055], [-118.14559128999997, 34.21478971700003], [-118.14557583299995, 34.214702127000066], [-118.145550072, 34.21464545200007], [-118.14553966099999, 34.21458666900003]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);

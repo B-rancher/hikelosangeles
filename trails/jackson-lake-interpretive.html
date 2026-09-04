@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackson Lake Interpretive — Hike Los Angeles</title>
+<meta name="description" content="Jackson Lake Interpretive is a 0.62-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Jackson Lake Interpretive</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Jackson Lake Interpretive — Angeles National Forest <small>Trail Distance 0.62 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Jackson Lake Interpretive is a 0.62-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>38W06</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.62 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Jackson Lake Interpretive</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-117.72733535199995, 34.39193875800004], [-117.72753034099998, 34.39209727700006], [-117.72786941399994, 34.392329275000066], [-117.72810141099995, 34.39248988800006], [-117.72817279599997, 34.39267429600005], [-117.72816089799994, 34.39284680700007], [-117.72818469299995, 34.39301931800003], [-117.72826797399995, 34.39322157200007], [-117.72826797399995, 34.39331080200003], [-117.72810141199994, 34.39329295600004], [-117.72786346499998, 34.39318588000003], [-117.72763741699998, 34.39313234300005], [-117.72751844399994, 34.39305500900008], [-117.72728049799997, 34.39295983100004], [-117.72682245099998, 34.392823012000065], [-117.72653691599999, 34.392745680000075], [-117.726084819, 34.39259101500005], [-117.72575169399994, 34.392472042000065], [-117.72546615899995, 34.39235901700005], [-117.72509139399995, 34.392210301000034], [-117.72477611499994, 34.39212702000003], [-117.72455006699994, 34.39199615000007], [-117.72426453099996, 34.391859331000035], [-117.72400278999999, 34.39174035800005], [-117.72369940899995, 34.39157974400007], [-117.72361612699996, 34.391508360000046], [-117.72382433099995, 34.39148456600003], [-117.72416935299998, 34.39150241100003], [-117.72458575899998, 34.39153810300007], [-117.72480585799997, 34.39160948700004], [-117.72500216399999, 34.39161543600005], [-117.72542451799995, 34.391651128000035], [-117.72563866999997, 34.39166897300004], [-117.72581712899995, 34.39160948800003], [-117.72601343499997, 34.39163328200004], [-117.72624543199998, 34.39167492300004], [-117.72642389099997, 34.39167492300004], [-117.72656665899996, 34.39164517900008], [-117.72669752999997, 34.391651128000035], [-117.72700685999996, 34.39179984500004], [-117.72732422099995, 34.39193051600006]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

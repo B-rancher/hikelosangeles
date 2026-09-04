@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackson Flat Geological — Hike Los Angeles</title>
+<meta name="description" content="Jackson Flat Geological is a 0.53-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Jackson Flat Geological</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Jackson Flat Geological — Angeles National Forest <small>Trail Distance 0.53 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Jackson Flat Geological is a 0.53-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.53 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Jackson Flat Geological</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-117.73629416799997, 34.38101632000007], [-117.73633222399997, 34.381095420000065], [-117.73641312599995, 34.38124770500008], [-117.73647023299998, 34.38139047300007], [-117.73650830499997, 34.381552276000036], [-117.73651782199994, 34.381661731000065], [-117.73656065299997, 34.38172835700004], [-117.73665107199997, 34.38182829400006], [-117.73667962499997, 34.38189491900005], [-117.73673673299999, 34.382023409000055], [-117.73683666999995, 34.38219473100003], [-117.73686998199997, 34.382304186000056], [-117.73696515999995, 34.38233273900005], [-117.737069857, 34.38231370400007], [-117.73720310699997, 34.382285151000076], [-117.73730780299996, 34.38226135600007], [-117.73738394599997, 34.38223756100007], [-117.73750291899995, 34.38225659600005], [-117.73757430299997, 34.382247079000024], [-117.737636168, 34.38218997200005], [-117.73771706999997, 34.382166177000045], [-117.73777893699997, 34.382166177000045], [-117.73782176699996, 34.38214238300003], [-117.73791218599996, 34.38212334700006], [-117.73800260599995, 34.38209003500003], [-117.73810730199995, 34.38201389200003], [-117.738173927, 34.38191871300006], [-117.73824531099996, 34.38183781200007], [-117.73833097199997, 34.38177118600004], [-117.73844994499996, 34.38175215100006], [-117.73862602399998, 34.38179022200006], [-117.73869264899997, 34.38184732900004], [-117.73878782899999, 34.381928231000074], [-117.73895914999997, 34.38199009700003], [-117.73911143499998, 34.38203292800006], [-117.73924944399994, 34.38203768600005], [-117.73926847899997, 34.38196630200002], [-117.73930179099995, 34.381928231000074], [-117.73936841699998, 34.38197582000004], [-117.73946359499996, 34.382004374000076], [-117.73953497899998, 34.38209003400004], [-117.73953973799996, 34.38216141800007], [-117.73958256799995, 34.382180454000036], [-117.73964443499995, 34.382180453000046], [-117.73971105899994, 34.382132865000074], [-117.73979196, 34.38201865000008], [-117.73984430899998, 34.38193299000005], [-117.73989665699997, 34.38185208800007], [-117.73991093399997, 34.38176166900007], [-117.73982051399997, 34.381723597000075], [-117.73968726399994, 34.38168552600007], [-117.73961588099996, 34.38170456100005], [-117.73944455999998, 34.38168552600007], [-117.73926847899997, 34.381647454000074], [-117.73913522899994, 34.38160462400003], [-117.73901625699995, 34.38151420500003], [-117.73889728299997, 34.381457098000055], [-117.73871168499994, 34.38139047300007], [-117.73845470299995, 34.381271500000025], [-117.738392837, 34.38124294700003], [-117.73833097099998, 34.38118584000006], [-117.73820723899996, 34.38111921500007], [-117.73805495399995, 34.38105734800007], [-117.73793122199999, 34.38100975900005], [-117.73781224899994, 34.38099548200006], [-117.73758382099999, 34.381005], [-117.73736491099999, 34.38100975900005], [-117.73724593699995, 34.38102403600004], [-117.73716979399995, 34.38102403600004], [-117.73703654499997, 34.381005], [-117.73677004599995, 34.38096692800008], [-117.73672245599994, 34.38092885700007], [-117.73672245599994, 34.38090030400008], [-117.73672721499997, 34.38086223300007], [-117.73668914399997, 34.38082416100008], [-117.73662620699997, 34.38081431200004]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

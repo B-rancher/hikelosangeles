@@ -7,16 +7,15 @@
 <meta name="description" content="Bear Divide Chapparal is a 1.42-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="../style.css">
-<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+<link rel="stylesheet" href="../style-v2.css">
 </head>
 <body>
 
-<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
-      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
       <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
     </a>
     <form class="header-search" onsubmit="return false;">
@@ -31,7 +30,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../trails.html">Trails</a>
         <div class="dropdown">
-          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <strong>By Mountain Range</strong>
           <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
@@ -44,7 +43,6 @@
         <div class="dropdown">
           <a href="../camps.html?type=trail">Trail Camps</a>
           <a href="../camps.html?type=car">Car Camps</a>
-          <a href="../camps.html">View All Camps &rarr;</a>
         </div>
       </li>
       <li><a href="#">Conditions</a></li>
@@ -55,35 +53,61 @@
 
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Bear Divide Chapparal</div>
-  <h1 class="page-title">Bear Divide Chapparal</h1>
-  <p class="page-subtitle">Bear Divide Chapparal is a 1.42-mile hiking trail in the Angeles National Forest.</p>
+
   <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-head">Trail Details</div>
-        <div class="panel-body" style="overflow-x:auto;">
-          <table class="report-table">
-            <tr><th>Length</th><td>1.42 mi (1 mapped segment)</td></tr>
-            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr><tr><th>USFS Trail Number</th><td>14W09</td></tr><tr><th>USFS Trail Class</th><td>4</td></tr>
-          </table>
-        </div>
+    <div id="content-left">
+      <h1 class="trail-title">Bear Divide Chapparal — Angeles National Forest <small>Trail Distance 1.42 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Bear Divide Chapparal is a 1.42-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>14W09</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>1.42 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
       </div>
-      <div class="panel">
-        <div class="panel-head">Map</div>
-        <div class="panel-body"><div id="map"></div></div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Bear Divide Chapparal</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
       </div>
     </div>
+
     <div>
-      <div class="panel">
-        <div class="panel-head">Trip Reports</div>
-        <div class="panel-body">
-          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Bear Divide Chapparal yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel-head">Source</div>
-        <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">U.S. Forest Service trail data (not currently mapped in OpenStreetMap).</p>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
         </div>
       </div>
     </div>
@@ -109,7 +133,7 @@
       <li><a href="#">Contact / Support</a></li>
     </ul></div>
     <div><h4>Why Hike Los Angeles</h4><ul>
-      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
     </ul></div>
   </div>
   <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
@@ -118,7 +142,7 @@
 <script>
   const segments = [[[-118.39748417699997, 34.36031047500006], [-118.39762705499999, 34.36022881400004], [-118.39774602799997, 34.36017170700006], [-118.39789355499994, 34.36000990400004], [-118.39805535899995, 34.35984810100007], [-118.39828378699997, 34.35961015500004], [-118.39845034799998, 34.35943883300007], [-118.39850269699997, 34.35935793200008], [-118.39852649199997, 34.35925323600003], [-118.39859311699996, 34.359134262000055], [-118.398716848, 34.35901528900007], [-118.39889292799995, 34.35892011100003], [-118.39910391999996, 34.35879386700003], [-118.39925263599997, 34.35877007200003], [-118.39946678799998, 34.35879386700003], [-118.39960955499998, 34.35882361000006], [-118.39970473499994, 34.358817661000046], [-118.39998748, 34.35866788900006], [-118.40016831999998, 34.358567950000065], [-118.40028729299996, 34.35851560300006], [-118.40038247099994, 34.358520362000036], [-118.40043481899994, 34.35855367400006], [-118.40057918699995, 34.35863325300005], [-118.40067436399994, 34.35862135600007], [-118.40088851599995, 34.35850238300003], [-118.400983694, 34.35845479300008], [-118.40104912899994, 34.358430998000074], [-118.40118594899997, 34.35845479400007], [-118.40132276799994, 34.358478588000025], [-118.40144768899995, 34.358448845000055], [-118.40155476599995, 34.35839530700002], [-118.401691584, 34.35827633400004], [-118.40178081399995, 34.35816925800003], [-118.40187004399996, 34.35816925800003], [-118.40198901699995, 34.35815141200004], [-118.40214962999994, 34.358062182000026], [-118.40221506499995, 34.35805028500005], [-118.40226224499997, 34.35807302300003], [-118.40236218299998, 34.35813964700003], [-118.40241731999998, 34.358193053000036], [-118.40247163799995, 34.35825862100006], [-118.40256008699998, 34.35835961500004], [-118.40259536899998, 34.35839663000007], [-118.40263344099998, 34.35839663000007], [-118.40266675399994, 34.35832524600005], [-118.40272664899999, 34.35825848800005], [-118.40306572199995, 34.35816925800003], [-118.403375053, 34.35807408000005], [-118.40345238599997, 34.35802054200008], [-118.40347023099997, 34.357919415000026], [-118.40341669299994, 34.35787777400003], [-118.40334530899997, 34.35780044100005], [-118.40329177099994, 34.35769931400006], [-118.40327392499995, 34.357610084000044], [-118.40324418199998, 34.357532752000054], [-118.40322038799997, 34.357467317000044], [-118.403250131, 34.35738403600004], [-118.40331556599995, 34.35726506300006], [-118.40340479599996, 34.357259114000044], [-118.40344643699996, 34.35731860100003], [-118.403541615, 34.35737213900006], [-118.40363679299998, 34.35739593300008], [-118.40379740799995, 34.35736619000005], [-118.40395207199998, 34.35733049800007], [-118.40409483999997, 34.35733049700008], [-118.40419596599997, 34.35737213800007], [-118.40432683699999, 34.35739593300008], [-118.40439227299998, 34.35738403600004], [-118.40443986099996, 34.35736024100004], [-118.40452909099997, 34.357389984000065], [-118.40459452699997, 34.35738403500005], [-118.40471944899997, 34.35730075400005], [-118.40479678099996, 34.35718773000008], [-118.40486221599997, 34.357211525000025], [-118.40495103599994, 34.35727352400005], [-118.40500338499999, 34.35732111300007], [-118.40503669699996, 34.357406774000026], [-118.40506049099997, 34.35749719300003], [-118.40510332199995, 34.35755905900004], [-118.40515091099996, 34.35758285400004], [-118.405312714, 34.35762092500005], [-118.40536506299998, 34.35764472000005], [-118.40538409899995, 34.35771134500004], [-118.40537933899998, 34.35782555900005], [-118.405374581, 34.35794453200003], [-118.40538409799996, 34.35807302300003], [-118.40543644599995, 34.35813013000006], [-118.40558397299998, 34.35823006700008], [-118.40565059799997, 34.35831096900006], [-118.40568907799997, 34.358371512000076], [-118.40580805099995, 34.358430998000074], [-118.40590757999996, 34.35846801300005], [-118.40598372299996, 34.358487049000075], [-118.40602220299996, 34.35847263900007], [-118.40608168999995, 34.35844289600004], [-118.40610548399997, 34.35836556300006], [-118.40614712499996, 34.35826443600007], [-118.40623040599996, 34.358175207000045], [-118.40631963599998, 34.358157360000064], [-118.40641481399996, 34.35813356600005], [-118.40650999299999, 34.35802649000004], [-118.40660517099997, 34.35798485000004], [-118.40675388699998, 34.35791941400004], [-118.40683716799998, 34.35784803000007], [-118.40692044999997, 34.357824236000056], [-118.40699778199996, 34.35781233900008], [-118.407027525, 34.35769931500005], [-118.40707511499994, 34.357616033000056], [-118.40709890899996, 34.35755654700006], [-118.40708106299996, 34.357467316000054], [-118.40706916599999, 34.357354292000025], [-118.40708701199998, 34.357199628000046], [-118.40714649899996, 34.357068757000036], [-118.40730116399999, 34.35695573300006], [-118.40739039299996, 34.356896246000076], [-118.40743203399995, 34.35681891400003], [-118.40743203299996, 34.35675942700004], [-118.40742013699997, 34.35666424900006], [-118.40748557099994, 34.356670198000074], [-118.40755695499996, 34.356717787000036], [-118.40759859599996, 34.35675942700004], [-118.40760454399998, 34.356830811000066], [-118.40758669899998, 34.356896246000076], [-118.40757480099995, 34.357003322000025], [-118.40759264699994, 34.357068757000036], [-118.40764023599996, 34.35711039800003], [-118.407693774, 34.35715798700005], [-118.40777110699997, 34.35718773100007], [-118.40785438799998, 34.35722342200006], [-118.40793766899998, 34.35721747400004], [-118.40806853899994, 34.35715798700005], [-118.40815776899996, 34.357086604000074], [-118.40825294799998, 34.357039014000065], [-118.40834812699995, 34.357021168000074], [-118.40847899699997, 34.35703306500005], [-118.40856822599994, 34.35704496200003], [-118.40861581499996, 34.35700927000005], [-118.40871694199996, 34.356896246000076], [-118.40880617299996, 34.356747530000064], [-118.40890729899996, 34.35667614600004], [-118.40897868299999, 34.35664640300007], [-118.40903816999997, 34.35657501900005], [-118.40909170799995, 34.35648578900003], [-118.40913929699997, 34.35643225100006], [-118.40924637299997, 34.35635491900007], [-118.40924637299997, 34.35631922700003], [-118.40915714299996, 34.35630733000005], [-118.40903816999997, 34.35630733000005], [-118.40891919599994, 34.356360868000024], [-118.40884781299997, 34.35642035400008], [-118.408734789, 34.35645009700005], [-118.40872289099997, 34.356426303000035], [-118.40878832699997, 34.35635491900007], [-118.40886565899996, 34.35625974100003], [-118.40896678599995, 34.356140768000046], [-118.40903816999997, 34.35606938400008], [-118.40907980999998, 34.35593851300007], [-118.40911550299995, 34.35581359200006], [-118.40918688599999, 34.355736259000025], [-118.40918688599999, 34.355658927000036], [-118.40914524599998, 34.35565892600005], [-118.40902032399998, 34.35574220700005], [-118.40885376099999, 34.35579574600007], [-118.40875263399994, 34.35578979700006], [-118.40866340499997, 34.35574815600006], [-118.40868125099996, 34.35570056700004], [-118.40881806899995, 34.355611338000074], [-118.40894893999996, 34.35553400500004], [-118.40889540199998, 34.35551615900005], [-118.40875263499998, 34.35551615900005], [-118.40860391799998, 34.355545902000074], [-118.40839571599997, 34.35553995400005], [-118.40835407499998, 34.35550426100008], [-118.40830648599996, 34.355420980000076], [-118.40820535899996, 34.35530795600005], [-118.40816371799997, 34.35528416200003], [-118.408235102, 34.35526631600004], [-118.40828269099995, 34.35524847000005], [-118.40834812699995, 34.355147343000056], [-118.40845520199997, 34.35505811200005], [-118.40866340399998, 34.354951037000035], [-118.40884781299997, 34.35486180700008], [-118.40891521799995, 34.35476081300004], [-118.40903894999997, 34.354551420000064], [-118.40910557499996, 34.35440389400003], [-118.40914364599996, 34.35427064400005], [-118.40918171799996, 34.35420877800004], [-118.40924358299998, 34.354142153000055], [-118.40931020799997, 34.35403745700006], [-118.409329244, 34.353985108000074], [-118.40930544999998, 34.35398986800004], [-118.40925786099996, 34.35400890300008], [-118.40925310199998, 34.353985109000064], [-118.40929117299999, 34.353937519000056], [-118.40932924499998, 34.35385185900003], [-118.40937683299995, 34.35368529600004], [-118.40947201199998, 34.35350445700004], [-118.40951546699995, 34.35339374500006]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);

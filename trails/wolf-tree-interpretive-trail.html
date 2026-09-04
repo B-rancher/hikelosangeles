@@ -7,16 +7,15 @@
 <meta name="description" content="Wolf Tree Interpretive Trail is a 0.46-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="../style.css">
-<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+<link rel="stylesheet" href="../style-v2.css">
 </head>
 <body>
 
-<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
-      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
       <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
     </a>
     <form class="header-search" onsubmit="return false;">
@@ -31,7 +30,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../trails.html">Trails</a>
         <div class="dropdown">
-          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <strong>By Mountain Range</strong>
           <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
@@ -44,7 +43,6 @@
         <div class="dropdown">
           <a href="../camps.html?type=trail">Trail Camps</a>
           <a href="../camps.html?type=car">Car Camps</a>
-          <a href="../camps.html">View All Camps &rarr;</a>
         </div>
       </li>
       <li><a href="#">Conditions</a></li>
@@ -55,35 +53,61 @@
 
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Wolf Tree Interpretive Trail</div>
-  <h1 class="page-title">Wolf Tree Interpretive Trail</h1>
-  <p class="page-subtitle">Wolf Tree Interpretive Trail is a 0.46-mile hiking trail in the Angeles National Forest.</p>
+
   <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-head">Trail Details</div>
-        <div class="panel-body" style="overflow-x:auto;">
-          <table class="report-table">
-            <tr><th>Length</th><td>0.46 mi (1 mapped segment)</td></tr>
-            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr><tr><th>USFS Trail Number</th><td>11W12</td></tr><tr><th>USFS Trail Class</th><td>4</td></tr>
-          </table>
-        </div>
+    <div id="content-left">
+      <h1 class="trail-title">Wolf Tree Interpretive Trail — Angeles National Forest <small>Trail Distance 0.46 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Wolf Tree Interpretive Trail is a 0.46-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>11W12</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.46 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
       </div>
-      <div class="panel">
-        <div class="panel-head">Map</div>
-        <div class="panel-body"><div id="map"></div></div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Wolf Tree Interpretive Trail</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
       </div>
     </div>
+
     <div>
-      <div class="panel">
-        <div class="panel-head">Trip Reports</div>
-        <div class="panel-body">
-          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Wolf Tree Interpretive Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel-head">Source</div>
-        <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">U.S. Forest Service trail data (not currently mapped in OpenStreetMap).</p>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
         </div>
       </div>
     </div>
@@ -109,7 +133,7 @@
       <li><a href="#">Contact / Support</a></li>
     </ul></div>
     <div><h4>Why Hike Los Angeles</h4><ul>
-      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
     </ul></div>
   </div>
   <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
@@ -118,7 +142,7 @@
 <script>
   const segments = [[[-118.01479143499995, 34.29859504500007], [-118.01473649399998, 34.29862765900003], [-118.01471507899998, 34.298656212000026], [-118.01473649399998, 34.298677628000064], [-118.01475077099997, 34.29872759700004], [-118.01476147799997, 34.29875258100003], [-118.01479003199995, 34.29879541100007], [-118.01479717099994, 34.298845380000046], [-118.01483509499997, 34.298907703000054], [-118.01486968599994, 34.29895526700005], [-118.01497778399994, 34.29897688600005], [-118.01511614999998, 34.29901580200004], [-118.01517668499997, 34.299067689000026], [-118.01519398099998, 34.299145520000025], [-118.015241544, 34.29926226600003], [-118.01529775599994, 34.299500083000055], [-118.01533234799996, 34.29974222300007], [-118.01535829099998, 34.29995842000005], [-118.01538965599997, 34.30006247500006], [-118.01550743899998, 34.300091027000065], [-118.01561808399998, 34.30008745900005], [-118.01575728299997, 34.300094597000054], [-118.01580011299995, 34.300098166000055], [-118.01584651299999, 34.300119582000036], [-118.01590361999996, 34.30018382700007], [-118.01592503399996, 34.30021951800006], [-118.01590718899996, 34.300251641000045], [-118.01585008199999, 34.30027662600003], [-118.01578226799995, 34.300290903000075], [-118.01573586699999, 34.30031945600007], [-118.015689469, 34.30033730200006], [-118.01563592999997, 34.30036585600004], [-118.01561808399998, 34.300412255000026], [-118.01556811599994, 34.30049077700005], [-118.01551457799997, 34.300540746000024], [-118.01544319499999, 34.30056216100007], [-118.01542534899994, 34.30061569900005], [-118.01542534799995, 34.30064782200003], [-118.01542177899995, 34.30069065200007], [-118.01541464099995, 34.300729913000055], [-118.01539679399997, 34.30078702000003], [-118.01537537999997, 34.30081200400008], [-118.01531827199994, 34.30080129700008], [-118.01527901099996, 34.300729913000055], [-118.01526830399996, 34.30067637500008], [-118.01525045699998, 34.30064782100004], [-118.01518978099995, 34.30061213000005], [-118.01513624299997, 34.300576438000064], [-118.01510412099998, 34.30051933100003], [-118.01507913699999, 34.30047293100006], [-118.01503987599995, 34.300433670000075], [-118.01500418299997, 34.30041582500007], [-118.01497206099998, 34.30041582400003], [-118.01493636899994, 34.300387270000044], [-118.01491138499995, 34.30036228600005], [-118.01487926099998, 34.30034800900006], [-118.014818586, 34.30033373200007], [-118.01479360099995, 34.30030874900007], [-118.01480073999994, 34.300262349000036], [-118.01480073899995, 34.300240934000044], [-118.01477932399996, 34.30021595000005], [-118.01472935499999, 34.30020167200007], [-118.01465083399995, 34.30018739600007], [-118.01458658799999, 34.30014099600004], [-118.01439385199996, 34.30001607500003], [-118.01419754699998, 34.299937552000074], [-118.01408690099998, 34.29990186100002], [-118.01396197899999, 34.29989115300003], [-118.01390130299995, 34.29988758400003], [-118.01386204199997, 34.29985903100004], [-118.01382635099998, 34.29981976900007], [-118.01380850399994, 34.299762662000035], [-118.01380136599994, 34.29969841700006], [-118.01381564299999, 34.299619894000045], [-118.01385847299997, 34.29954494100008], [-118.01391914899995, 34.29950924900004], [-118.01403336299995, 34.29941645100007], [-118.01415471599995, 34.299312944000064], [-118.01426536099996, 34.29924869900003], [-118.01436529799997, 34.29924869900003], [-118.01445095899999, 34.29923442200004], [-118.01452234199996, 34.29920229900006], [-118.014558035, 34.299123777000034], [-118.014565173, 34.29906310100006], [-118.01454375799995, 34.298977440000044], [-118.01451520399996, 34.29890605700007], [-118.01449021999997, 34.298848949000046], [-118.01447594399997, 34.298784703000024], [-118.01445809799998, 34.29874544300003], [-118.01445452799999, 34.29866692000007], [-118.014472373, 34.29857055200006], [-118.01449021999997, 34.298495599000034], [-118.01455219999997, 34.29842597800007]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);

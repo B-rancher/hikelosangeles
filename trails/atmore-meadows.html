@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atmore Meadows — Hike Los Angeles</title>
+<meta name="description" content="Atmore Meadows is a 1.29-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Atmore Meadows</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Atmore Meadows — Angeles National Forest <small>Trail Distance 1.29 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Atmore Meadows is a 1.29-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>16W15</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>1.29 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Atmore Meadows</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.61356214199998, 34.68316458500004], [-118.61348685599995, 34.683399750000035], [-118.61335122599996, 34.68362817900004], [-118.61321559699996, 34.683870883000054], [-118.61312279799995, 34.684070758000075], [-118.61304427699997, 34.68432774000007], [-118.61286581599995, 34.68462755200005], [-118.61278015599999, 34.68490594900004], [-118.61270163299997, 34.685134377000054], [-118.61270877299995, 34.685341391000065], [-118.61268021799998, 34.685498435000056], [-118.61265166499999, 34.68573400100007], [-118.61264452699999, 34.685976707000066], [-118.61268735699997, 34.68636217900007], [-118.61279443299998, 34.68668340600004], [-118.61293720099997, 34.687040325000055], [-118.61304427599998, 34.687354414000026], [-118.61309424499996, 34.68776130200007], [-118.61305855299997, 34.688146775000064], [-118.61300144499995, 34.688589354000044], [-118.61292292299999, 34.68921039400004], [-118.612880094, 34.68940313000007], [-118.61274446399995, 34.689574452000045], [-118.61251603499994, 34.68974577200004], [-118.61235899099995, 34.68993850900006], [-118.61220908499996, 34.69013124500003], [-118.612130563, 34.690195491000054], [-118.61206631799996, 34.69029542800007], [-118.61198065699995, 34.690345397000044], [-118.611766505, 34.69030256600007], [-118.61154521499998, 34.69023832100004], [-118.61135248, 34.69013838300003], [-118.61118829699996, 34.690059862000055], [-118.61111691299999, 34.68998847800003], [-118.61101697599997, 34.69002417000007], [-118.61098128299994, 34.69018121400006], [-118.61093845299996, 34.690345397000044], [-118.61093845399995, 34.690509580000025], [-118.61090989999997, 34.69065948600007], [-118.610981284, 34.69073800800004], [-118.61103125199998, 34.69088791400003], [-118.61103125199998, 34.69105209700007], [-118.61100983699998, 34.691309079000064], [-118.61095986899994, 34.69150181500004], [-118.61094559099996, 34.69168741300007], [-118.61097414499994, 34.69183018000007], [-118.61108122099995, 34.69193011800007], [-118.611266818, 34.69186587300004], [-118.61135961699995, 34.691751658000044], [-118.61150952299994, 34.69178735100007], [-118.61169512199996, 34.691937256000074], [-118.61191641099998, 34.69207288500007], [-118.61214483999998, 34.69215140800003], [-118.61231616099997, 34.69227989800004], [-118.61240182199998, 34.692436943000075], [-118.61231616099997, 34.692579710000075], [-118.61224477699994, 34.69270820200006], [-118.61217339299998, 34.69281527700008], [-118.61208059499995, 34.69290807600004], [-118.61190927399997, 34.69296518400006], [-118.61177364399998, 34.693015152000044], [-118.61170939899995, 34.69314364300004], [-118.61170225999996, 34.69333638000006], [-118.61165229199997, 34.69345773200007], [-118.61153807799997, 34.69342204000003], [-118.61124540399999, 34.69324358100005], [-118.61093131499996, 34.69305798200003], [-118.61074571699999, 34.69292235300003], [-118.61068860999995, 34.69275817000005], [-118.61062436399999, 34.692551157000025], [-118.61052442599998, 34.69237983600004], [-118.61019606099995, 34.692251345000045], [-118.609739204, 34.69207288500007], [-118.60900395199997, 34.691908703000024], [-118.60856850999994, 34.691794489000074], [-118.60778328799995, 34.69149467600005], [-118.60716224799995, 34.69123055600005], [-118.60682674399999, 34.690987851000045], [-118.60673394599996, 34.69089505200003], [-118.60664114699995, 34.69091646800007], [-118.60652458499999, 34.69093531500005]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

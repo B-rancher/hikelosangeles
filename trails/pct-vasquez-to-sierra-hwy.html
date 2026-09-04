@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pct Vasquez To Sierra Hwy — Hike Los Angeles</title>
+<meta name="description" content="Pct Vasquez To Sierra Hwy is a 2.67-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Pct Vasquez To Sierra Hwy</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Pct Vasquez To Sierra Hwy — Angeles National Forest <small>Trail Distance 2.67 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Pct Vasquez To Sierra Hwy is a 2.67-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>2.67 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Pct Vasquez To Sierra Hwy</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.32195346699996, 34.48894334900007], [-118.32198119599997, 34.48889871800003], [-118.32201688799995, 34.48888444200003], [-118.32212396399996, 34.48889158000003], [-118.32232383899998, 34.48889514900003], [-118.32264863499995, 34.48891299500008], [-118.32309478399998, 34.48892727200007], [-118.32335533399998, 34.48892370300007], [-118.32353736299996, 34.48891299500008], [-118.32361231599998, 34.48889158000003], [-118.323694408, 34.48889158000003], [-118.32380505299994, 34.48892727200007], [-118.32389785099997, 34.48893797900007], [-118.32405132599996, 34.48894868700006], [-118.32417267999995, 34.48891656400008], [-118.32429046299995, 34.48890228700003], [-118.32445821399995, 34.48890942600008], [-118.32466879699996, 34.48890585700008], [-118.32483297999994, 34.48891656400008], [-118.32508282299995, 34.48892370200008], [-118.32532552799995, 34.48893084100007], [-118.32555752499997, 34.48893084100007], [-118.32583235299995, 34.48893797900007], [-118.32611431999999, 34.48894511800006], [-118.32622853299995, 34.48895225600006], [-118.32627850299997, 34.488984379000044], [-118.32629991799996, 34.489045055000076], [-118.32644625399996, 34.48904862400008], [-118.32643554599997, 34.489187823000066], [-118.32640699299998, 34.48930560600007], [-118.32637486999994, 34.48953046500003], [-118.326371301, 34.49000159800005], [-118.32633917899994, 34.49076183600005], [-118.32634274699996, 34.491839732000074], [-118.32633203999995, 34.49267492300004], [-118.32632847099995, 34.49285695200007], [-118.32632490199995, 34.492971166000075], [-118.32632133299995, 34.493581498000026], [-118.32631776399995, 34.49417755300004], [-118.32634274799995, 34.494252506000066], [-118.32636059299995, 34.494334597000034], [-118.32634988599995, 34.49451305700006], [-118.32634274799995, 34.49495563600004], [-118.32633917799996, 34.495316124000055], [-118.32632133299995, 34.495815812000046], [-118.32630348699996, 34.49592288700006], [-118.32627850199998, 34.49603710200006], [-118.32626422599998, 34.49612633100003], [-118.32626422499999, 34.49622983800003], [-118.32628207199997, 34.496443989000056], [-118.32627850299997, 34.49668669400006], [-118.32628920999997, 34.49699007500004], [-118.32629277899997, 34.49740767000003], [-118.32628207199997, 34.498624765000045], [-118.32628920999997, 34.49923509700005], [-118.32627850199998, 34.49948494000006], [-118.32626779499998, 34.49965983100003], [-118.32623567199994, 34.49978475300003], [-118.32617142699996, 34.499888259000045], [-118.32610004299994, 34.49995607300008], [-118.32593942899996, 34.50001675000004], [-118.32580379999996, 34.500045303000036], [-118.32555038799995, 34.50005601100003], [-118.32523272999998, 34.500066719000074], [-118.32501857699998, 34.500077426000075], [-118.32492934699997, 34.50010241100006], [-118.32484011799994, 34.50014524100004], [-118.32475802599998, 34.500223763000065], [-118.32468307299996, 34.50033083900007], [-118.32462596599999, 34.50042006800004], [-118.32457956699994, 34.50055926700003], [-118.324319017, 34.50137661200006], [-118.324094157, 34.502072604000034], [-118.32406560299995, 34.50219752500004], [-118.32405132699995, 34.50234386300008], [-118.32405132599996, 34.502572291000035], [-118.32406917199995, 34.50286853400007], [-118.32406560299995, 34.50302557900005], [-118.32402991099997, 34.50314693100006], [-118.32388357499997, 34.503489573000024], [-118.323694408, 34.503842923000036], [-118.32350167099997, 34.50419627300005], [-118.32330179699994, 34.50452106900008], [-118.32294844699999, 34.50488155800008], [-118.32241663599996, 34.50535626100003], [-118.32182772099998, 34.505916623000076], [-118.32126735699995, 34.50642344900007], [-118.32099609799997, 34.50666972300007], [-118.32084619299997, 34.506826767000064], [-118.32068200999998, 34.50705162600008], [-118.32056065799998, 34.50722651700005], [-118.32048927299996, 34.50734786900006], [-118.32035721299997, 34.50756915900007], [-118.32020730699998, 34.50783684800007], [-118.32005026299998, 34.508111676000055], [-118.31987894199995, 34.508400780000045], [-118.31976472799994, 34.50861493200006], [-118.31972189799995, 34.50875413000006], [-118.31970762099996, 34.508886191000045], [-118.31967549799998, 34.50915031100004], [-118.31966479, 34.509803473000034], [-118.31965765199999, 34.510313867000036], [-118.31965408299999, 34.510934907000035], [-118.31965051399999, 34.51144530100004], [-118.31965051399999, 34.51184505100008], [-118.31965051299994, 34.51195926500003], [-118.31963623699994, 34.512376860000074], [-118.31958983699997, 34.51256602700005], [-118.31956128399997, 34.512665964000064], [-118.31948989999995, 34.51281587100004], [-118.31896165899997, 34.513658200000066], [-118.31858689399996, 34.514286378000065], [-118.318133607, 34.515064462000055], [-118.31786234899994, 34.515492764000044], [-118.31758752099995, 34.51592820600007], [-118.31748758299995, 34.51612094200004], [-118.31743404599996, 34.51626727900003], [-118.31740192299998, 34.51639220100003], [-118.31739478499998, 34.51667773600008], [-118.31734481599995, 34.51912263200006], [-118.31733053899995, 34.519204724000076], [-118.31726629299999, 34.51937961400006], [-118.31719133999997, 34.51952238100006], [-118.31714137199998, 34.519643734000056], [-118.31711995699999, 34.519782932000055], [-118.31711638799999, 34.519925700000044], [-118.31712352599999, 34.52005062200004], [-118.31714494099998, 34.520129144000066], [-118.31716826399997, 34.52017463900006]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

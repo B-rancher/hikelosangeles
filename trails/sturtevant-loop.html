@@ -7,16 +7,15 @@
 <meta name="description" content="Sturtevant Loop is a 0.84-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="../style.css">
-<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+<link rel="stylesheet" href="../style-v2.css">
 </head>
 <body>
 
-<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
-      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
       <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
     </a>
     <form class="header-search" onsubmit="return false;">
@@ -31,7 +30,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../trails.html">Trails</a>
         <div class="dropdown">
-          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <strong>By Mountain Range</strong>
           <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
@@ -44,7 +43,6 @@
         <div class="dropdown">
           <a href="../camps.html?type=trail">Trail Camps</a>
           <a href="../camps.html?type=car">Car Camps</a>
-          <a href="../camps.html">View All Camps &rarr;</a>
         </div>
       </li>
       <li><a href="#">Conditions</a></li>
@@ -55,35 +53,61 @@
 
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Sturtevant Loop</div>
-  <h1 class="page-title">Sturtevant Loop</h1>
-  <p class="page-subtitle">Sturtevant Loop is a 0.84-mile hiking trail in the Angeles National Forest.</p>
+
   <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-head">Trail Details</div>
-        <div class="panel-body" style="overflow-x:auto;">
-          <table class="report-table">
-            <tr><th>Length</th><td>0.84 mi (1 mapped segment)</td></tr>
-            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr><tr><th>USFS Trail Number</th><td>11W14.A</td></tr><tr><th>USFS Trail Class</th><td>2</td></tr>
-          </table>
-        </div>
+    <div id="content-left">
+      <h1 class="trail-title">Sturtevant Loop — Angeles National Forest <small>Trail Distance 0.84 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Sturtevant Loop is a 0.84-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>11W14.A</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.84 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
       </div>
-      <div class="panel">
-        <div class="panel-head">Map</div>
-        <div class="panel-body"><div id="map"></div></div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Sturtevant Loop</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
       </div>
     </div>
+
     <div>
-      <div class="panel">
-        <div class="panel-head">Trip Reports</div>
-        <div class="panel-body">
-          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Sturtevant Loop yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel-head">Source</div>
-        <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">U.S. Forest Service trail data (not currently mapped in OpenStreetMap).</p>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
         </div>
       </div>
     </div>
@@ -109,7 +133,7 @@
       <li><a href="#">Contact / Support</a></li>
     </ul></div>
     <div><h4>Why Hike Los Angeles</h4><ul>
-      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
     </ul></div>
   </div>
   <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
@@ -118,7 +142,7 @@
 <script>
   const segments = [[[-118.01800460399994, 34.20880091300006], [-118.017981621, 34.208867772000076], [-118.01797686299994, 34.20895819000003], [-118.01807679899997, 34.20909620000003], [-118.01826715599998, 34.209296074000065], [-118.01839088799994, 34.20939601200007], [-118.01858600399999, 34.20951974400003], [-118.01880491499998, 34.20962919900006], [-118.01887153899997, 34.20970534200006], [-118.01886678099999, 34.20982431400006], [-118.01882395099994, 34.20991473400005], [-118.01879539699996, 34.21002894900005], [-118.01878587899995, 34.21016695700007], [-118.01873353099995, 34.21026689400003], [-118.01870021899998, 34.21035255500004], [-118.01869545999995, 34.210442975000035], [-118.01870973599995, 34.210552429000074], [-118.018633594, 34.210628572000076], [-118.01857648599997, 34.21074754600005], [-118.01853365599999, 34.21086175900007], [-118.01849558499998, 34.21095217900006], [-118.01848606799996, 34.21106163400003], [-118.01852413799998, 34.211152053000035], [-118.01862407599998, 34.21123295500007], [-118.01870497699997, 34.21126150900005], [-118.01879063799998, 34.21130909800007], [-118.01887629899994, 34.21136620500005], [-118.01895244099995, 34.211370964000025], [-118.01897147699998, 34.21132337500006], [-118.01907617299997, 34.21127102600008], [-118.01918562799995, 34.21124247300003], [-118.01931411899994, 34.21122343800005], [-118.01943309199999, 34.21124723200006], [-118.01951875299994, 34.211290062000046], [-118.01963296699995, 34.21140427600005], [-118.01972814599998, 34.211475660000076], [-118.01988043199998, 34.21148993800006], [-118.02002795699997, 34.211537527000075], [-118.02008982299998, 34.21158511500005], [-118.02013265399995, 34.21162794600008], [-118.02023259099997, 34.21170408800003], [-118.02026590399998, 34.21178499000007], [-118.02026114499995, 34.21188492700003], [-118.02025638599997, 34.211980106000055], [-118.02030873399997, 34.212061008000035], [-118.02035632399998, 34.212141909000024], [-118.02039915299997, 34.212203776000024], [-118.02045150199996, 34.21227515900006], [-118.02049909099998, 34.21236082000007], [-118.02056095699999, 34.21242744500006], [-118.02063234099995, 34.21265111400004], [-118.02058951099997, 34.21284147100005], [-118.020522885, 34.21297472100008], [-118.02048005599994, 34.213079417000074], [-118.02047529699996, 34.21322694400004], [-118.02051336799997, 34.213298327000075], [-118.020508609, 34.21340302400006], [-118.02039915399996, 34.213488684000026], [-118.02027066299996, 34.213536274000035], [-118.02012789599996, 34.21360765700007], [-118.02001368099997, 34.21369807700006], [-118.01989946699996, 34.21376946100003], [-118.01970910999995, 34.21392174700003], [-118.01962344999998, 34.214021684000045], [-118.01954254799995, 34.214069273000064], [-118.01948068099995, 34.21411686300007], [-118.01943785199995, 34.21418824600005], [-118.01943309199999, 34.214321496000025], [-118.01952351199998, 34.21448805800003], [-118.01956634199996, 34.21457847700003], [-118.01959489599994, 34.21467365600006], [-118.01964248599995, 34.21483545900003], [-118.01976145799995, 34.214978227000074], [-118.01989470799998, 34.21511147700005], [-118.01996609199995, 34.21513051300008], [-118.02006602999995, 34.21517334300006], [-118.02015168999998, 34.21525424500004], [-118.02022783299998, 34.21533038700005], [-118.02031825299997, 34.215358941000034], [-118.02049909099998, 34.215339905000064], [-118.02069420699996, 34.21531135200007], [-118.02089884099996, 34.215273281000066], [-118.02110347399997, 34.21525424400005], [-118.02127955399999, 34.21522093200008], [-118.02156984899995, 34.21524472700003], [-118.02176972299998, 34.215278039000054], [-118.02189821399998, 34.21530659300004], [-118.02196007999999, 34.21534942300008], [-118.02195532099995, 34.21540653000005], [-118.02197435799997, 34.21546363700003], [-118.02205049999998, 34.21552550300004], [-118.02213615999995, 34.21554929800004], [-118.02222181999997, 34.21550646700007], [-118.02232651799994, 34.21546363700003], [-118.02243597299997, 34.21542556600008], [-118.02251687499995, 34.21536370000007], [-118.02256446299998, 34.215211415000056], [-118.02258825799998, 34.21514478900008], [-118.02268343599997, 34.215092441000024], [-118.02278337399997, 34.21504485200006], [-118.02278337399997, 34.21498774500003], [-118.02273102599997, 34.21498298600005], [-118.02262157099995, 34.21496870900006], [-118.02250735599995, 34.21492587900008], [-118.02237886499995, 34.21479738800008], [-118.02233603499997, 34.214745039000036], [-118.02226465099994, 34.214645103000066], [-118.02221230299995, 34.214568959000076]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);

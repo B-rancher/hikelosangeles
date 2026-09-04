@@ -4,19 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oak Flat Trail — Hike Los Angeles</title>
-<meta name="description" content="Oak Flat Trail is a 1.31-mile hiking trail in the Angeles National Forest.">
+<meta name="description" content="Oak Flat Trail is a 1.26-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="../style.css">
-<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+<link rel="stylesheet" href="../style-v2.css">
 </head>
 <body>
 
-<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
-      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
       <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
     </a>
     <form class="header-search" onsubmit="return false;">
@@ -31,7 +30,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../trails.html">Trails</a>
         <div class="dropdown">
-          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <strong>By Mountain Range</strong>
           <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
@@ -44,7 +43,6 @@
         <div class="dropdown">
           <a href="../camps.html?type=trail">Trail Camps</a>
           <a href="../camps.html?type=car">Car Camps</a>
-          <a href="../camps.html">View All Camps &rarr;</a>
         </div>
       </li>
       <li><a href="#">Conditions</a></li>
@@ -55,35 +53,61 @@
 
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Oak Flat Trail</div>
-  <h1 class="page-title">Oak Flat Trail</h1>
-  <p class="page-subtitle">Oak Flat Trail is a 1.31-mile hiking trail in the Angeles National Forest.</p>
+
   <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-head">Trail Details</div>
-        <div class="panel-body" style="overflow-x:auto;">
-          <table class="report-table">
-            <tr><th>Length</th><td>1.31 mi (1 mapped segment)</td></tr>
-            <tr><th>Surface</th><td>ground</td></tr><tr><th>Difficulty (SAC scale)</th><td>hiking</td></tr>
-          </table>
-        </div>
+    <div id="content-left">
+      <h1 class="trail-title">Oak Flat Trail — Angeles National Forest <small>Trail Distance 1.26 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Oak Flat Trail is a 1.26-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>17W16</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>1.26 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
       </div>
-      <div class="panel">
-        <div class="panel-head">Map</div>
-        <div class="panel-body"><div id="map"></div></div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Oak Flat Trail</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
       </div>
     </div>
+
     <div>
-      <div class="panel">
-        <div class="panel-head">Trip Reports</div>
-        <div class="panel-body">
-          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Oak Flat Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel-head">Source</div>
-        <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">OpenStreetMap community trail data.</p>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
         </div>
       </div>
     </div>
@@ -109,16 +133,16 @@
       <li><a href="#">Contact / Support</a></li>
     </ul></div>
     <div><h4>Why Hike Los Angeles</h4><ul>
-      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
     </ul></div>
   </div>
   <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
 </footer>
 
 <script>
-  const segments = [[[-118.7241811, 34.598942], [-118.7243477, 34.5988564], [-118.7244898, 34.5987857], [-118.7247034, 34.598816], [-118.7251899, 34.5990617], [-118.7253991, 34.5991522], [-118.7256163, 34.5991809], [-118.7257344, 34.5991567], [-118.7255546, 34.5990617], [-118.7251899, 34.598523], [-118.7253106, 34.5977701], [-118.7253293, 34.5975626], [-118.7252569, 34.5974213], [-118.7251684, 34.5973396], [-118.7251791, 34.5972822], [-118.7252811, 34.5972733], [-118.7254903, 34.5973661], [-118.7255842, 34.5973882], [-118.7261528, 34.5973197], [-118.7263298, 34.597333], [-118.7267241, 34.5973882], [-118.7269843, 34.5974147], [-118.7269467, 34.5973572], [-118.7266812, 34.5970901], [-118.7264371, 34.5968561], [-118.7259275, 34.5966353], [-118.7257612, 34.5965116], [-118.725611, 34.5963129], [-118.7255117, 34.5960678], [-118.7252757, 34.5953458], [-118.7252435, 34.5952045], [-118.7252864, 34.5950456], [-118.7252569, 34.5949616], [-118.7251872, 34.5948998], [-118.7248036, 34.5946547], [-118.7246668, 34.5945355], [-118.724699, 34.5945223], [-118.7249377, 34.5945532], [-118.7254688, 34.5945708], [-118.7258121, 34.5945863], [-118.725906, 34.5945598], [-118.726024, 34.5945002], [-118.726075, 34.5944141], [-118.7261957, 34.5940652], [-118.7262493, 34.5939504], [-118.7263083, 34.5939129], [-118.7263995, 34.5938908], [-118.7264881, 34.5939327], [-118.7266517, 34.5940166], [-118.7268475, 34.5940453], [-118.7269789, 34.5940188], [-118.7271398, 34.5940255], [-118.7272552, 34.593999], [-118.7272874, 34.5939018], [-118.7272927, 34.593723], [-118.7272525, 34.5935706], [-118.7272471, 34.5934867], [-118.7273598, 34.593394], [-118.7274107, 34.5933631], [-118.7274939, 34.5932748], [-118.7276334, 34.5931842], [-118.7276655, 34.5931158], [-118.7276012, 34.5925064], [-118.7275663, 34.5923606], [-118.7275207, 34.5923076], [-118.7275288, 34.5922502], [-118.7275341, 34.5921752], [-118.7274268, 34.5921332], [-118.7273759, 34.5920824], [-118.7275288, 34.5921133], [-118.7277004, 34.5921707], [-118.7279123, 34.5923275], [-118.7281698, 34.5924865], [-118.7284622, 34.5926587], [-118.7287518, 34.5929148], [-118.7289611, 34.5930429], [-118.7288886, 34.5929281], [-118.7288484, 34.5927691], [-118.7286714, 34.5924843], [-118.7286687, 34.5924556], [-118.7287733, 34.5925075], [-118.7290026, 34.5926742], [-118.7291408, 34.5928089], [-118.7291434, 34.5927625], [-118.7291287, 34.5926885], [-118.7290616, 34.5925218], [-118.7289758, 34.5923882], [-118.7288806, 34.5921752], [-118.728843, 34.592067], [-118.7288189, 34.5919698], [-118.7287894, 34.5919212], [-118.7287572, 34.5918638], [-118.7286942, 34.5917468], [-118.7286526, 34.5916783], [-118.7286258, 34.5916044], [-118.7285708, 34.5915679], [-118.7285131, 34.5915161], [-118.7284514, 34.5914333], [-118.728379, 34.591367], [-118.7283388, 34.5913096], [-118.7283736, 34.5912997], [-118.7284715, 34.5912886], [-118.7285212, 34.5912897], [-118.728729, 34.5913615], [-118.7288404, 34.5913924], [-118.728953, 34.5914774], [-118.7290093, 34.591515], [-118.7290201, 34.5914995], [-118.7289999, 34.5914531], [-118.7289315, 34.5913284], [-118.7288752, 34.5912643], [-118.7288658, 34.5912257], [-118.728902, 34.5912203]]];
+  const segments = [[[-118.72432906799997, 34.59876100200006], [-118.72446469699997, 34.59887521700006], [-118.72467884799994, 34.59898229300006], [-118.724893, 34.59904653700005], [-118.72513570499996, 34.59905367600004], [-118.72529274899995, 34.59909650700007], [-118.72548548599997, 34.59918930600003], [-118.72562111599996, 34.59918930500004], [-118.72570677599998, 34.599153613000055], [-118.72564966899995, 34.59911078300007], [-118.72553545399995, 34.59901798400006], [-118.72539268699995, 34.598825248000026], [-118.72528561099995, 34.59860395800007], [-118.72521422699998, 34.598511159000054], [-118.72523564299996, 34.59838980600006], [-118.72525705799995, 34.598225624000065], [-118.725285612, 34.59797578000007], [-118.72532130299999, 34.59778304300005], [-118.72533557999998, 34.59751178500005], [-118.72530702699999, 34.59737615600005], [-118.72539982499995, 34.59736901800005], [-118.72560683899997, 34.59736901800005], [-118.72591378899995, 34.59731904900008], [-118.726185048, 34.59730477200003], [-118.72651341299996, 34.59734046400007], [-118.72677039499996, 34.59736901700006], [-118.72703451499996, 34.597404710000035], [-118.72686319399998, 34.597254804000045], [-118.726706149, 34.59705492900002], [-118.72653482799996, 34.59689788400004], [-118.72639205999997, 34.59680508500003], [-118.72622073999997, 34.59672656300006], [-118.72596375799998, 34.596626626000045], [-118.72577815899996, 34.59651241100005], [-118.72563539199996, 34.596312537000074], [-118.72548548599997, 34.59594134100007], [-118.72535699499997, 34.59558442200006], [-118.72529275, 34.595348855000054], [-118.72527133499995, 34.59523464100005], [-118.72528561099995, 34.59511328800005], [-118.72529988799994, 34.59497765900005], [-118.72522850499996, 34.594884860000036], [-118.72509287499997, 34.59480633900006], [-118.72491441499994, 34.59470640100005], [-118.72475737099995, 34.594585048000056], [-118.72469312499999, 34.59452080300008], [-118.72485730799997, 34.59454221800007], [-118.72525705699996, 34.59455649500006], [-118.72560683799998, 34.594577910000055], [-118.72587095899996, 34.59459932500005], [-118.72602086499995, 34.59449224900004], [-118.72608510999999, 34.59437089700003], [-118.72615649399995, 34.59415674600007], [-118.72628498499995, 34.593942594000055], [-118.72637778399996, 34.59388548600003], [-118.72648485899998, 34.593892625000024], [-118.72660621199998, 34.59398542400004], [-118.72671328799998, 34.59402825400008], [-118.72688460899997, 34.59402825400008], [-118.72702023799997, 34.59400683900003], [-118.72709876, 34.59401397700003], [-118.72723438999998, 34.59399970100003], [-118.72729149699995, 34.593956871000046], [-118.72730577299996, 34.593806964000066], [-118.72730577299996, 34.59369988900005], [-118.72727721999996, 34.593621367000026], [-118.72727008199996, 34.59351429000003], [-118.72737001899998, 34.59337866200008], [-118.72748423299998, 34.59329300100006], [-118.72756275599994, 34.59321447900004], [-118.72766983099996, 34.593164511000055], [-118.72766983099996, 34.59305743400006], [-118.72764127799996, 34.59279331400006], [-118.72762700099997, 34.59256488600005], [-118.727584171, 34.59237214900003], [-118.72754134099995, 34.59210089100003], [-118.72770552399999, 34.59213658300007], [-118.72775549199997, 34.592193690000045], [-118.72787684399998, 34.59227221200007], [-118.72797678199998, 34.59236501100003], [-118.72814096399998, 34.59245781000004], [-118.72829800899996, 34.592536332000066], [-118.72840508399997, 34.59258630100004], [-118.72857640599995, 34.59270765400004], [-118.72871917299994, 34.592829006000045], [-118.72883338699995, 34.59292894300006], [-118.72891190999997, 34.592971774000034], [-118.72891190999997, 34.59285042100004], [-118.72887621799998, 34.59273620700003], [-118.72879055699997, 34.59261485500008], [-118.72869061999995, 34.59245781000004], [-118.72882624899995, 34.59250064100007], [-118.72900470899998, 34.59263627000007], [-118.72916175299997, 34.59278617600006], [-118.72916889199996, 34.59272906900003], [-118.72913319999998, 34.59260057800003], [-118.72896901699994, 34.59230076600005], [-118.72889049399998, 34.59214372200006], [-118.72886907999998, 34.59196526200003], [-118.72881197199996, 34.59187960100007], [-118.72877627999998, 34.591765387000066], [-118.728719174, 34.59163689600007], [-118.72864065099998, 34.59155123600004], [-118.72855498999996, 34.59150126700007], [-118.72850502199998, 34.59143702100005], [-118.72841936199995, 34.59139419100006], [-118.72834797699994, 34.59134422200003], [-118.728455054, 34.59131566900004], [-118.728583545, 34.59132994600003], [-118.72877627999998, 34.59135136100008], [-118.72891190899998, 34.591408468000054], [-118.72897615599999, 34.59148699000008], [-118.72903326199997, 34.59149412900007], [-118.72902612399997, 34.591422745000045], [-118.72896901699994, 34.59135136100008], [-118.72889049499997, 34.591272839000055], [-118.72889049499997, 34.59117290100005]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);

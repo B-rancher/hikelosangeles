@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prairie Fork — Hike Los Angeles</title>
+<meta name="description" content="Prairie Fork is a 2.42-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Prairie Fork</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Prairie Fork — Angeles National Forest <small>Trail Distance 2.42 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Prairie Fork is a 2.42-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>38W07</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>2.42 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Prairie Fork</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-117.70004322299997, 34.34380390700005], [-117.70033610699994, 34.343810793000046], [-117.70056453499996, 34.343810793000046], [-117.70070730199996, 34.34382031100006], [-117.70082151599996, 34.343791757000076], [-117.70091669499999, 34.343687061000026], [-117.70105946299998, 34.343591883000045], [-117.70116415899997, 34.34355381100005], [-117.70115464099996, 34.34343959700004], [-117.70110705199994, 34.34336345400004], [-117.70123078399996, 34.343306348000056], [-117.70138306899997, 34.34321116900003], [-117.70153535499998, 34.34319213300006], [-117.70189703299997, 34.34305888400007], [-117.70209690799999, 34.34292563300005], [-117.70228726499994, 34.34277334800004], [-117.70246810299994, 34.34261154500007], [-117.70262038899995, 34.34244974100005], [-117.702905924, 34.34232601000008], [-117.703239049, 34.34230697400005], [-117.70341988799998, 34.34236408100003], [-117.70370542299997, 34.34236408100003], [-117.70405758399994, 34.34237359900004], [-117.70438119, 34.342478294000045], [-117.70454299299996, 34.342602027000055], [-117.70465720799996, 34.34277334800004], [-117.70468576099995, 34.34304936600006], [-117.704714315, 34.343306347000066], [-117.70479045699994, 34.34350622200003], [-117.70501888599995, 34.34370609700005], [-117.70539959999996, 34.343810793000046], [-117.70601825899996, 34.34382982900007], [-117.70635138399996, 34.343858382000064], [-117.70654174099997, 34.344001150000054], [-117.70669402699997, 34.344096328000035], [-117.70683679399997, 34.344239096000024], [-117.70691293599998, 34.34438186400007], [-117.70694148999996, 34.344581739000034], [-117.70692245499998, 34.34483872000004], [-117.70685582999994, 34.34512425600008], [-117.70672257999996, 34.34540027300005], [-117.70644656299999, 34.34578098700007], [-117.70629427799997, 34.345980861000044], [-117.70622765299998, 34.346152182000026], [-117.70624668799996, 34.34636157500006], [-117.70645607999995, 34.34671373500004], [-117.70678920499995, 34.34706589500007], [-117.70695100799998, 34.34735143100005], [-117.70710329399998, 34.34766552000008], [-117.70716040099995, 34.347817805000034], [-117.70727461499996, 34.347893949000024], [-117.70747448999998, 34.34788443000008], [-117.70774098899994, 34.34791298400006], [-117.70795038199998, 34.347998645000075], [-117.70809314999997, 34.34808430500004], [-117.70838820299997, 34.34810334100007], [-117.70882602299997, 34.348065269000074], [-117.70900686299996, 34.34810334100007], [-117.70938757599998, 34.348112859000025], [-117.71008237899997, 34.34816996600006], [-117.71085332399997, 34.34820803700006], [-117.71112934099995, 34.34816996500007], [-117.71169089499995, 34.348036716000024], [-117.71186221599999, 34.347893948000035], [-117.711824144, 34.34772262700005], [-117.71167185899998, 34.34757034200004], [-117.71153860899994, 34.34749419800005], [-117.711424395, 34.34737998400004], [-117.71143391299995, 34.34725625200008], [-117.71151957299998, 34.34720866400005], [-117.71154812699996, 34.34709444900005], [-117.71149101999998, 34.347027824000065], [-117.711348252, 34.34703734200008], [-117.71127210999998, 34.34701830600005], [-117.71124355599994, 34.34693264600003], [-117.71117693099995, 34.34678987800004], [-117.71117693199994, 34.34662807500007], [-117.71124355599994, 34.346399647000055], [-117.71123403899998, 34.34621880700007], [-117.71127210999998, 34.346133147000046], [-117.71143391299995, 34.34609507600004], [-117.71153860899994, 34.346009415000026], [-117.711681377, 34.34580002200005], [-117.71188125099997, 34.34561918400004], [-117.71209064399994, 34.34552400500007], [-117.71230003599999, 34.34549545200008], [-117.71242376799995, 34.34537172000006], [-117.71258557199997, 34.34537172000006], [-117.71271882199994, 34.34532413000005], [-117.71288062499997, 34.34524798700005], [-117.71309001699996, 34.34523846900004], [-117.713232786, 34.34527654100003], [-117.713451696, 34.34527654100003], [-117.71364205299994, 34.34517184400005], [-117.71387048099996, 34.34512425600008], [-117.71424167599997, 34.34509570200004], [-117.71447010499998, 34.345019559000036], [-117.71447010499998, 34.344943416000035], [-117.714412999, 34.344867273000034], [-117.71447010499998, 34.344800649000035], [-117.71462239099998, 34.34475305900003], [-117.71484130099998, 34.34473402400005], [-117.71510779999994, 34.344657881000046], [-117.715364782, 34.344505595000044], [-117.71574549599995, 34.344315239000025], [-117.71620235199998, 34.34418198900005], [-117.71658306599994, 34.34415343500007], [-117.71682101199997, 34.34415343500007], [-117.71700185199995, 34.344239096000024], [-117.71707799399996, 34.34447704200005], [-117.71715413799996, 34.344705470000065], [-117.717239797, 34.34495293400005], [-117.71744919099996, 34.345000524000056], [-117.71763002999995, 34.34503859500006], [-117.71776327999999, 34.34501004100008], [-117.71787749299995, 34.34499100600004], [-117.71805833299999, 34.344971970000074], [-117.71814399299996, 34.34485775600007], [-117.71817254599995, 34.34449607800008], [-117.71812495699999, 34.34410584600005], [-117.71805833299999, 34.34390597200007], [-117.71815351099997, 34.343734650000044], [-117.71812495699999, 34.343468151000025], [-117.71810592199995, 34.34311599100005], [-117.71819158199997, 34.342839973000025], [-117.718315314, 34.34259250900004], [-117.71859133099997, 34.34246877700008], [-117.71888638499996, 34.342383116000065], [-117.71970491899998, 34.34254492000008], [-117.71994762399999, 34.34269244600006], [-117.72011299699994, 34.34276858900006], [-117.72065432499994, 34.34305412500004], [-117.72100529399995, 34.34328017300004], [-117.72117780499997, 34.34335155700006], [-117.72137411199998, 34.34334560800005], [-117.72161205699996, 34.34333966000003], [-117.72182025999996, 34.34333966000003], [-117.72208794899996, 34.343369403000054], [-117.72227830599996, 34.34338130000003], [-117.72244486899996, 34.34344078700008], [-117.72260548299994, 34.343452685000045], [-117.72270660899994, 34.34341699300006], [-117.72281368499995, 34.34335750500003], [-117.72294455499997, 34.34329801900003], [-117.723075425, 34.34327422500007], [-117.72327767999997, 34.343292070000075], [-117.72348588299997, 34.343357506000075], [-117.72366434299994, 34.343369403000054], [-117.72378926399995, 34.34335155700006], [-117.72395582699994, 34.34338130000003], [-117.72430084799998, 34.343357506000075], [-117.72475294499998, 34.34328612200005], [-117.72490166299997, 34.34323853300003], [-117.72503253199994, 34.34320878900007], [-117.72512771099997, 34.34327422500007], [-117.72518214799999, 34.34332826900004], [-117.72525263299997, 34.34332776200006], [-117.72538945099996, 34.343309917000056], [-117.72553221899994, 34.343369403000054], [-117.72574637099996, 34.343452684000056], [-117.72592482999994, 34.34348837600004], [-117.72623416, 34.34348242800007], [-117.72634718499995, 34.34349432500005], [-117.72644236399998, 34.343607349000024], [-117.72653159299995, 34.343738220000034], [-117.72663271999994, 34.34383339800007], [-117.72669220599994, 34.34386314100004], [-117.72676359099995, 34.34387503900007], [-117.72684687199995, 34.34384529600004], [-117.72693015299996, 34.34386314100004], [-117.72704317699998, 34.34392857600005], [-117.72711456099995, 34.34395237100006], [-117.72720379099997, 34.343946422000045], [-117.72729896899995, 34.34391073000006], [-117.72742389099994, 34.343815552000024], [-117.727541025, 34.34376691800003]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

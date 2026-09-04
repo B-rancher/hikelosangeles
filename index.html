@@ -93,8 +93,8 @@
       <p style="font-size:12.5px;color:#5C5842;margin-top:0;">Every cataloged trail, peak, spring and camp in one view. Click any point or line for details, or use a category link to browse the full list.</p>
 
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:10px;font-size:12.5px;">
-        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="toggleTrails" checked> <span style="width:14px;height:3px;background:#39FF14;display:inline-block;"></span> Foot Trails (262)</label>
-        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="toggleFireRoads" checked> <span style="width:14px;height:3px;background:#FF1493;display:inline-block;"></span> Fire Roads (227)</label>
+        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="toggleTrails" checked> <span style="width:14px;height:3px;background:#39FF14;display:inline-block;"></span> Foot Trails (152)</label>
+        <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="toggleFireRoads" checked> <span style="width:14px;height:3px;background:#FF1493;display:inline-block;"></span> Fire Roads (396)</label>
         <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="toggleSmTrails" checked> <span style="width:14px;height:3px;background:#8FCB8F;display:inline-block;"></span> Santa Monica Mtns Trails (620)</label>
         <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="togglePeaks"> <span style="width:10px;height:10px;border-radius:50%;background:#A8503B;display:inline-block;"></span> Peaks (202)</label>
         <label style="display:flex;align-items:center;gap:5px;cursor:pointer;"><input type="checkbox" id="toggleSprings" checked> <span style="width:10px;height:10px;border-radius:50%;background:#3B6FA6;display:inline-block;"></span> Springs (70)</label>
@@ -311,15 +311,9 @@ function loadLineLayer(url, layerGroup, color, popupFn, opts){
 
 loadLineLayer('data/foot-trails.json', trailLayer, '#39FF14',
   t => `<strong><a href="${t.slug}">${t.name}</a></strong> &middot; Foot Trail`);
-loadLineLayer('data/unnamed-foot.json', trailLayer, '#39FF14',
-  u => `<strong>Unnamed Path</strong>${u.ref ? ' &middot; Ref ' + u.ref : ''}<br>${u.miles} mi`,
-  { weight:2, opacity:0.6, dashArray:'4,4' });
 
 loadLineLayer('data/fire-roads.json', fireRoadLayer, '#FF1493',
   f => `<strong>${f.name}</strong> &middot; Fire Road<br>${f.miles} mi`);
-loadLineLayer('data/unnamed-track.json', fireRoadLayer, '#FF1493',
-  u => `<strong>Unnamed Fire Road</strong>${u.ref ? ' &middot; Ref ' + u.ref : ''}<br>${u.miles} mi`,
-  { weight:2, opacity:0.6, dashArray:'4,4' });
 
 loadLineLayer('data/sm-trails.json', smTrailLayer, '#8FCB8F',
   t => `<strong>${t.name}</strong><br>${t.miles} mi &middot; Type: ${t.type} &middot; Surface: ${t.substrate}`);

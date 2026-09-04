@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lower Shake Trail — Hike Los Angeles</title>
+<meta name="description" content="Lower Shake Trail is a 0.69-mile hiking trail in the Angeles National Forest.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="../style-v2.css">
+</head>
+<body>
+
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
+    </a>
+    <form class="header-search" onsubmit="return false;">
+      <input type="text" placeholder="Search trails, peaks, camps...">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</header>
+<nav class="mainnav">
+  <div class="inner">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Trails</a>
+        <div class="dropdown">
+          <strong>By Mountain Range</strong>
+          <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
+          <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
+          <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
+          <a href="../trails.html">View All Trails &rarr;</a>
+        </div>
+      </li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs &amp; Water</a></li>
+      <li><a href="../camps.html">Camps</a>
+        <div class="dropdown">
+          <a href="../camps.html?type=trail">Trail Camps</a>
+          <a href="../camps.html?type=car">Car Camps</a>
+        </div>
+      </li>
+      <li><a href="#">Conditions</a></li>
+      <li><a href="#">Submit a Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Lower Shake Trail</div>
+
+  <div class="two-col">
+    <div id="content-left">
+      <h1 class="trail-title">Lower Shake Trail — Angeles National Forest <small>Trail Distance 0.69 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Lower Shake Trail is a 0.69-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>18W02</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.69 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
+      </div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Lower Shake Trail</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
+        </div>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><h4>Navigation</h4><ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../trails.html">Hiking Trails</a></li>
+      <li><a href="../peaks.html">Peaks</a></li>
+      <li><a href="../springs.html">Springs</a></li>
+      <li><a href="../camps.html">Camps</a></li>
+    </ul></div>
+    <div><h4>Mountain Ranges</h4><ul>
+      <li><a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a></li>
+      <li><a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a></li>
+      <li><a href="../trails.html?region=Griffith+Park">Griffith Park</a></li>
+    </ul></div>
+    <div><h4>Resources</h4><ul>
+      <li><a href="#">Weather</a></li>
+      <li><a href="#">Contact / Support</a></li>
+    </ul></div>
+    <div><h4>Why Hike Los Angeles</h4><ul>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
+</footer>
+
+<script>
+  const segments = [[[-118.52513039899998, 34.69921194700004], [-118.52520598099994, 34.699113401000034], [-118.52530948699996, 34.69886712700003], [-118.52537730199998, 34.69863513000007], [-118.52546653199994, 34.698392424000076], [-118.52549508499999, 34.69829962600005], [-118.52548437699994, 34.698181842000054], [-118.52543440899996, 34.69809975100003], [-118.52539157899997, 34.69802479800006], [-118.52536302399994, 34.69798196700003], [-118.52535945499994, 34.69791772200006], [-118.52539871599998, 34.697885599000074], [-118.52544154699996, 34.697857046000024], [-118.52551649999998, 34.69783563100003], [-118.525598592, 34.69780350800005], [-118.52569495899996, 34.697757109000065], [-118.52574849699994, 34.69768929400004], [-118.52577705099998, 34.697575079000046], [-118.52583058899995, 34.69750726500007], [-118.52590554199998, 34.69744658900004], [-118.52598763299994, 34.69735379000008], [-118.52602332599997, 34.69731452900004], [-118.52611612399994, 34.69724314500007], [-118.52614110899998, 34.69717176100005], [-118.52614110899998, 34.697082531000035], [-118.52613753999998, 34.696939764000035], [-118.52610898599994, 34.69676487400005], [-118.52610184699995, 34.69666136700005], [-118.52611612399994, 34.69658641400002], [-118.52613396999999, 34.69651503000006], [-118.52612683199999, 34.696450784000035], [-118.52606972399997, 34.69636512400007], [-118.52604830999996, 34.696293740000044], [-118.52605544799997, 34.69620094100003], [-118.52605187899997, 34.69611528100006], [-118.52601618699998, 34.69605817400003], [-118.52596621799995, 34.696011773000066], [-118.52595194099996, 34.69591540500005], [-118.52597335699994, 34.695829745000026], [-118.52604830899998, 34.69572623900007], [-118.52610898599994, 34.695672701000035], [-118.52620535399996, 34.69555134800004], [-118.52628030699998, 34.69545854900008], [-118.52641950499998, 34.695226552000065], [-118.526498028, 34.695051661000036], [-118.52658368899995, 34.694898186000046], [-118.52668362499998, 34.69485535600006], [-118.52676571699999, 34.69481966300003], [-118.52683710099996, 34.694758988000046], [-118.52689063899999, 34.69466261900004], [-118.52692276199997, 34.69453056000003], [-118.52696916099995, 34.694391361000044], [-118.52702626799999, 34.69423074700006], [-118.52707980599996, 34.69412724100005], [-118.52714048299998, 34.69403801100003], [-118.52719045099997, 34.693963058000065], [-118.52722971199995, 34.693916658000035], [-118.527261835, 34.69383456700007], [-118.52731894199997, 34.69372392200006], [-118.52739389499999, 34.693609708000054], [-118.52748669399995, 34.69354546200003], [-118.52755093899998, 34.693481217000055], [-118.52759020099995, 34.69339555700003], [-118.52761518399996, 34.69330632700007], [-118.5276366, 34.69323494300005], [-118.52770798399996, 34.69320282000007], [-118.52776865899995, 34.693177836000075], [-118.527775798, 34.69312072900004], [-118.52775438299994, 34.693035069000075], [-118.52773653699995, 34.692995807000045], [-118.52773653699995, 34.69293156200007], [-118.52775081399994, 34.69286017700006], [-118.52779007499998, 34.69278522500008], [-118.52782576599998, 34.692656734000025], [-118.52786502799995, 34.69259605700006], [-118.52794355099996, 34.69247470500005], [-118.52796853499996, 34.692364060000045], [-118.52800065699995, 34.69227126100003], [-118.52806490199998, 34.692196308000064], [-118.52814342499994, 34.69211778600004], [-118.52825406999995, 34.692064248000065], [-118.52836828399995, 34.69198572600004], [-118.52845394499997, 34.69191077200003], [-118.52856102099997, 34.691885788000036], [-118.528668096, 34.691867942000044], [-118.52874661799996, 34.69185009700004], [-118.52878231099999, 34.69183225000006], [-118.52873591099996, 34.69181083500007], [-118.52869308099997, 34.69180369700007], [-118.52865738799994, 34.691775144000076], [-118.52860384999997, 34.691721606000044], [-118.52858957399997, 34.69166806700008], [-118.52856101999998, 34.69160382200005], [-118.52858243499998, 34.691536007000025], [-118.52863240499994, 34.69151459200003], [-118.52869664899998, 34.69151459200003], [-118.52875732599995, 34.69150745400003], [-118.52883584899996, 34.69147890000005], [-118.52895006199998, 34.691446778000056], [-118.52902501499995, 34.69137539400003], [-118.52910710699996, 34.69131114800007], [-118.52922895499995, 34.691254885000035]]];
+  const map = L.map('map', { scrollWheelZoom:false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  const group = L.featureGroup();
+  segments.forEach(seg => {
+    const latlngs = seg.map(c => [c[1], c[0]]);
+    L.polyline(latlngs, { color:'#39FF14', weight:4 }).addTo(group);
+  });
+  group.addTo(map);
+  map.fitBounds(group.getBounds(), { padding:[20,20] });
+</script>
+</body>
+</html>

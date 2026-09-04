@@ -7,16 +7,15 @@
 <meta name="description" content="Oliver Trail is a 0.43-mile hiking trail in the Angeles National Forest.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="../style.css">
-<style>#map{height:380px;border:1px solid #C9C2A8;}</style>
+<link rel="stylesheet" href="../style-v2.css">
 </head>
 <body>
 
-<div class="utility-bar"><div class="inner"><a href="#">User Log In</a><a href="#">or Sign Up</a></div></div>
+<div class="utility-bar"><div class="inner"><a href="#">Log In</a><a href="#">Sign Up</a></div></div>
 <header class="site-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
-      <span class="mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EFEEDD" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20 L9 8 L13 15 L16 10 L21 20 Z"/></svg></span>
       <span class="brand-text"><span class="t1">Hike Los Angeles</span><br><span class="t2">Trail &amp; Forest Directory</span></span>
     </a>
     <form class="header-search" onsubmit="return false;">
@@ -31,7 +30,7 @@
       <li><a href="../index.html">Home</a></li>
       <li><a href="../trails.html">Trails</a>
         <div class="dropdown">
-          <strong style="display:block;padding:7px 14px;font-size:11px;text-transform:uppercase;color:#7A7660;">By Mountain Range</strong>
+          <strong>By Mountain Range</strong>
           <a href="../trails.html?region=San+Gabriel+Mountains">San Gabriel Mountains</a>
           <a href="../trails.html?region=Santa+Monica+Mountains">Santa Monica Mountains</a>
           <a href="../trails.html?region=Griffith+Park">Griffith Park</a>
@@ -44,7 +43,6 @@
         <div class="dropdown">
           <a href="../camps.html?type=trail">Trail Camps</a>
           <a href="../camps.html?type=car">Car Camps</a>
-          <a href="../camps.html">View All Camps &rarr;</a>
         </div>
       </li>
       <li><a href="#">Conditions</a></li>
@@ -55,35 +53,61 @@
 
 <div class="page-wrap">
   <div class="crumbs"><a href="../index.html">Home</a> &raquo; <a href="../trails.html">Trails</a> &raquo; Oliver Trail</div>
-  <h1 class="page-title">Oliver Trail</h1>
-  <p class="page-subtitle">Oliver Trail is a 0.43-mile hiking trail in the Angeles National Forest.</p>
+
   <div class="two-col">
-    <div>
-      <div class="panel">
-        <div class="panel-head">Trail Details</div>
-        <div class="panel-body" style="overflow-x:auto;">
-          <table class="report-table">
-            <tr><th>Length</th><td>0.43 mi (1 mapped segment)</td></tr>
-            <tr><th>Surface</th><td>NATIVE MATERIAL</td></tr><tr><th>USFS Trail Number</th><td>14W15</td></tr><tr><th>USFS Trail Class</th><td>1</td></tr>
-          </table>
-        </div>
+    <div id="content-left">
+      <h1 class="trail-title">Oliver Trail — Angeles National Forest <small>Trail Distance 0.43 Miles</small></h1>
+      <p class="line-divider"></p>
+
+      <p>Oliver Trail is a 0.43-mile hiking trail in the Angeles National Forest.</p>
+
+      <h4 class="line-divider">&#128204; Trail Details</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128506;</span><strong>Forest:</strong> <em>Angeles National Forest</em></li>
+        <li><span class="ico">&#128204;</span><strong>Trail Number:</strong> <em>14W15</em></li>
+        <li><span class="ico">&#9888;</span><strong>Trail Condition:</strong> <em>Not yet reported — be the first to submit a survey</em></li>
+        <li><span class="ico">&#128736;</span><strong>Activities:</strong> <em>Day Hiking, Backpacking</em></li>
+      </ul>
+
+      <h4 class="line-divider">&#128203; Trail Stats</h4>
+      <ul class="detail-list">
+        <li><span class="ico">&#128207;</span><strong>Distance:</strong> <em>0.43 miles</em></li>
+      </ul>
+
+      <div class="elev-box">
+        Elevation profile — coming soon. We don't yet have per-point elevation data for this trail.
       </div>
-      <div class="panel">
-        <div class="panel-head">Map</div>
-        <div class="panel-body"><div id="map"></div></div>
+
+      <h4 class="line-divider">&#128506; Map</h4>
+      <div id="map"></div>
+
+      <h3 class="line-divider">&#128248; Survey Photos</h3>
+      <div class="gallery-empty">No photos have been submitted for this trail yet. <a href="#">Upload the first one &rarr;</a></div>
+
+      <br>
+      <h3 class="line-divider">&#128203; Submitted Trail Reports</h3>
+      <div class="accordion">
+        <details open>
+          <summary><span>No reports yet for Oliver Trail</span> <span class="meta">Be the first to survey it</span></summary>
+          <div class="report-body">
+            <p style="color:#666;">Once hikers start submitting trail condition reports, they'll appear here.</p>
+          </div>
+        </details>
       </div>
     </div>
+
     <div>
-      <div class="panel">
-        <div class="panel-head">Trip Reports</div>
-        <div class="panel-body">
-          <p style="font-size:12.5px;color:#5C5842;">No trail reports have been submitted for Oliver Trail yet. If you've been here, help other hikers by <a href="#">submitting a report</a>.</p>
+      <div class="sidebar-panel">
+        <div class="sidebar-photo">
+          <div style="background:#eee; border:1px dashed var(--border); border-radius:4px; height:180px; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px;">No photo yet</div>
         </div>
-      </div>
-      <div class="panel">
-        <div class="panel-head">Source</div>
-        <div class="panel-body">
-          <p style="font-size:12px;color:#5C5842;">U.S. Forest Service trail data (not currently mapped in OpenStreetMap).</p>
+        <div class="photo-credit">Photo By: <b>&mdash;</b></div>
+        <a href="#" class="btn">Upload Images</a>
+        <a href="#" class="btn secondary">View Full Trail Map</a>
+        <a href="#" class="btn secondary">Survey This Trail</a>
+        <div class="directions-form" style="margin-top:14px;">
+          <input type="text" value="Current Location" readonly>
+          <a href="#" class="btn" style="margin-bottom:0;">Get Directions</a>
         </div>
       </div>
     </div>
@@ -109,7 +133,7 @@
       <li><a href="#">Contact / Support</a></li>
     </ul></div>
     <div><h4>Why Hike Los Angeles</h4><ul>
-      <li style="color:#C7CBB8;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
+      <li style="color:#999;">A volunteer-maintained directory built by hikers who log conditions after every trip.</li>
     </ul></div>
   </div>
   <div class="footer-bottom">Hike Los Angeles is a hobby project and community trail directory. Not affiliated with the U.S. Forest Service.</div>
@@ -118,7 +142,7 @@
 <script>
   const segments = [[[-118.33379740899994, 34.29225456200004], [-118.33370468799995, 34.292235265000045], [-118.33364401199998, 34.29220671200005], [-118.33359761299994, 34.29216031200008], [-118.33352622799998, 34.29211391200005], [-118.33343342899997, 34.292035390000024], [-118.33336561399994, 34.29199256000004], [-118.33331564599996, 34.29197828300005], [-118.333244262, 34.291942591000065], [-118.33318715599995, 34.29192117600007], [-118.33311577099994, 34.291903330000025], [-118.33304081799997, 34.291892623000024], [-118.33294444999996, 34.291899761000025], [-118.33283380599994, 34.291892623000024], [-118.33276955999997, 34.29185693000005], [-118.33270888399994, 34.29182480800006], [-118.33263036099999, 34.29181767000006], [-118.33255183899996, 34.291785547000075], [-118.33245190199995, 34.291789116000075], [-118.33238765699997, 34.291764132000026], [-118.33230556499996, 34.29171773200005], [-118.33221276599994, 34.29168917900006], [-118.33214495099998, 34.29167490200007], [-118.33206285999995, 34.291589241000054], [-118.33198076899998, 34.29154641100007], [-118.33192366199995, 34.29153570300008], [-118.33185227799999, 34.29148930400004], [-118.33179873999995, 34.29143576600006], [-118.33173806399998, 34.29139293600008], [-118.33172378699999, 34.29132512100006], [-118.33169166399995, 34.291257306000034], [-118.33160243499998, 34.291153800000075], [-118.33152034299997, 34.29107884700005], [-118.33145252799994, 34.291011033000075], [-118.33135615999998, 34.29092537100007], [-118.33130262299994, 34.29087183400003], [-118.33117769999996, 34.290829003000056], [-118.33111345499998, 34.29078260400007], [-118.33104563999996, 34.29070765100005], [-118.33100637899997, 34.290657682000074], [-118.33095640999994, 34.29060057500004], [-118.33094213399994, 34.29056131400006], [-118.33093499499995, 34.290536330000066], [-118.33093499499995, 34.290500638000026], [-118.33096354899999, 34.290493500000025], [-118.33100637899997, 34.29046494600004], [-118.33100637899997, 34.29044353100005], [-118.33096354899999, 34.290386424000076], [-118.33093142699994, 34.290322178000054], [-118.33090644199996, 34.29023294900003], [-118.33088145699998, 34.29012944200008], [-118.33088145799996, 34.29006876500006], [-118.33087788799997, 34.29001879700007], [-118.33082078199999, 34.29005805800006], [-118.33074225899998, 34.29009018100004], [-118.33064945999996, 34.29008304300004], [-118.3305638, 34.29006162700006], [-118.33048170799998, 34.290029505000064], [-118.33041032399996, 34.28994384400005], [-118.33038177099996, 34.289861753000025], [-118.33035321799997, 34.289840337000044], [-118.33024614099998, 34.289847476000034], [-118.33009980499997, 34.28981535300005], [-118.33000700599996, 34.289758246000076], [-118.329932053, 34.289715416000035], [-118.32989636099995, 34.28966901600006], [-118.32988208399996, 34.28964403200007], [-118.32984996099998, 34.28965473900007], [-118.32983925399998, 34.28969400100004], [-118.32978214699995, 34.289701139000044], [-118.32972860899997, 34.28969400100004], [-118.32968577899999, 34.289708277000045], [-118.32960011799997, 34.289708277000045], [-118.32952873299996, 34.289708277000045], [-118.329443073, 34.289718985000036], [-118.32937168899997, 34.289708277000045], [-118.32932528999999, 34.28966544700006], [-118.329164677, 34.28958335600004], [-118.32903618499995, 34.28950126400008], [-118.32890055699994, 34.289422742000056], [-118.32882203499997, 34.28934065100003], [-118.328800619, 34.289254990000074], [-118.32880061799995, 34.28919788300004], [-118.328807757, 34.28914791500006], [-118.32876492699995, 34.289122930000076], [-118.32869354299999, 34.28914077600007], [-118.32861859099995, 34.28918003700005], [-118.32853293, 34.28920145300003], [-118.32846511499997, 34.28919431400004], [-118.32842585399999, 34.28918360600005]]];
   const map = L.map('map', { scrollWheelZoom:false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution:'&copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', { attribution:'&copy; CARTO &copy; OpenStreetMap contributors', maxZoom:18 }).addTo(map);
   const group = L.featureGroup();
   segments.forEach(seg => {
     const latlngs = seg.map(c => [c[1], c[0]]);
